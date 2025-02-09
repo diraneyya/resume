@@ -2,26 +2,24 @@
 import Section from "../Section.astro"
 import HTML from "@/icons/html.astro"
 import CSS from "@/icons/css.astro"
-import JavaScript from "@/icons/javascript.astro"
-import TypeScript from "@/icons/type.astro"
+import Javascript from "@/icons/javascript.astro"
+import Typescript from "@/icons/type.astro"
 import React from "@/icons/react.astro"
 import Node from "@/icons/node.astro"
 import MySQL from "@/icons/sql.astro"
 import Git from "@/icons/git.astro"
 import GitHub from "@/icons/GitHub.astro"
+import GitLab from "@/icons/GitLab.astro"
 import Tailwind from "@/icons/tailwind.astro"
 import Next from "@/icons/next.astro"
+import Docker from "@/icons/docker.astro"
 import { skills } from "@cv"
-import Swift from "@/icons/swift.astro"
-import SwiftUI from "@/icons/swiftui.astro"
-import Kotlin from "@/icons/kotlin.astro"
-import Flutter from "@/icons/flutter.astro"
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
   CSS,
-  JavaScript,
-  TypeScript,
+  Javascript,
+  Typescript,
   React,
   Node,
   MySQL,
@@ -29,18 +27,16 @@ const SKILLS_ICONS: Record<string, any> = {
   GitHub,
   Next,
   Tailwind,
-  Swift,
-  SwiftUI,
-  Kotlin,
-  Flutter,
+  GitLab,
+  Docker
 }
 ---
 
-<Section title="Habilidades">
+<Section title="Skills">
   <ul>
     {
-      skills.map(({ name }) => {
-        const iconName = name === "Next.js" ? "Next" : name
+      skills.map(({ name, icon }) => {
+        const iconName = icon || name.split(/(\.| )/)[0]
         const Icon = SKILLS_ICONS[iconName]
 
         return (

@@ -1,17 +1,46 @@
 ---
+import { extractDirectives } from "astro/runtime/server/hydration.js";
 import Section from "../Section.astro"
-
+import Freelance from "@/icons/freelance.astro"
 import { work } from "@cv"
 ---
 
-<Section title="Experiencia laboral">
+<Section title="Experience">
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, url }) => {
-          const startYear = new Date(startDate).getFullYear()
-          const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Actual"
+        ({ name, startDate, endDate, position, summary, highlights, freelance, url }) => {
+
+          // local helper for converting dates to strings
+          const _ = (date : Date) => `${date.getFullYear()}`
+
+          // start date string using the helper
+          const dateStart = new Date(startDate);
+          const labelStart = _(dateStart)
+          // end date string can be null, resulting in jobs up to present
+          let labelEnd = "present"
+          let dateEnd = new Date(endDate)
+          if (isFinite(dateEnd.valueOf()))
+            labelEnd = _(dateEnd)
+          else dateEnd = new Date()
+
+          const millisDuration = dateEnd.getTime() - dateStart.getTime();
+          const monthsDuration = Math.round(millisDuration / 1000 / 60 / 60 / 24 / 30);
+          let labelDuration = ""
+
+          const _omit = (months : number) => Math.abs(6 * Math.round(months / 6) - months) < 2;
+          if (monthsDuration < 12)
+            labelDuration = `${monthsDuration} months`
+          else if (_omit(monthsDuration)) {
+            const tmp = Math.round(monthsDuration / 6) * 0.5;
+            labelDuration = `${tmp} year${tmp > 1 ? 's' : ''}`
+          }
+          else {
+            const tmp = Math.round(monthsDuration / 12)
+            const tmp2 = monthsDuration - tmp * 12
+            labelDuration = `${tmp} year${tmp > 1 ? 's' : ''}`
+            if (tmp2 > 1) labelDuration += ` ${tmp2} months`;
+          }
 
           return (
             <li>
@@ -19,25 +48,29 @@ import { work } from "@cv"
                 <header>
                   <div>
                     <h3>
-                      <a href={url} title={`Ver ${name}`} target="_blank">
+                      <a href={url} title={`Go to the homepage of ${name}`} target="_blank">
                         {name}
                       </a>
                     </h3>
-                    <h4>{position}</h4>
+                    <h4>{position} { true === freelance && 
+                        <mark class="shiny_bg"><span>👨🏼‍💻 </span>Contract</mark>
+                      }</h4>
                   </div>
 
                   <div>
                     <time 
                       datetime={startDate}
                       data-title={startDate}>
-                        {startYear}
-                    </time>
-                    {" - "}
-                    <time 
+                        {labelStart}
+                    </time>{
+                      labelEnd !== labelStart && 
+                      <>{" - "}<time 
                       datetime={endDate}
                       data-title={endDate}>
-                        {endYear}
-                    </time>
+                        {labelEnd}
+                    </time></>
+                    }
+                    { labelDuration.length > 0 && <summary>({labelDuration})</summary> }
                   </div>
                 </header>
 
@@ -85,11 +118,33 @@ import { work } from "@cv"
     margin-bottom: 4px;
   }
 
-  time {
+  time, summary {
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
     cursor: default;
+  }
+
+  summary {
+    font-weight: 300;
+    opacity: 0.66;
+  }
+
+  mark {
+    font-weight: 250;
+    font-size: 0.8rem;
+    background-color: #0004;
+    background-origin: padding-box;
+    background-repeat: repeat;
+    color: white;
+    border-radius: 0.33em;
+    padding: 0.125em 0.4em;
+    margin-left: 1em;
+    user-select: none;
+  }
+
+  mark > span {
+    color: #444;
   }
 
   [data-title]:hover:after {
@@ -124,6 +179,26 @@ import { work } from "@cv"
   @media (width <= 700px) {
     time {
       text-align: right;
+    }
+  }
+
+  @media print {
+    mark::before {
+      content: '(';
+    }
+
+    mark::after {
+      content: ')';
+    }
+
+    mark > span {
+      display: none;
+    }
+
+    mark {
+      background-color: transparent;
+      color: inherit;
+      text-decoration: underline;
     }
   }
 </style>

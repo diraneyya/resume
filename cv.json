@@ -1,275 +1,346 @@
 {
   "basics": {
-    "name": "Miguel Ángel Durán",
-    "label": "Full Stack Developer con más de 15 años de experiencia & Creador de Contenido de Programación",
+    "name": "Orwa Diraneyya",
+    "label": "Loves technology and people, loves teaching 🧑‍💻",
+    "summary": "An open-source advocate with software/​hardware exposure and 10 years of software development/​teaching experience.",
     "image": "/me.webp",
-    "email": "miduga@gmail.com",
-    "phone": "+34 688888888",
-    "url": "https://midu.dev",
-    "summary": "+15 años de experiencia como Desarrollador Web. Actualmente soy Creador de Contenido y Divulgador sobre Programación. Vivo en Barcelona, España. He trabajado en diferentes entornos: desde acelerar el desarrollo de start-ups hasta liderando equipos de empresas multinacionales.",
+    "email": "orwa.diraneyya@gmail.com",
+    "phone": "+4915143161634",
+    "url": "https://orwa.tech",
     "location": {
-      "address": "",
-      "postalCode": "08820",
-      "city": "el Prat de Llobregat",
-      "countryCode": "ES",
-      "region": "España"
+      "address": "Martinstraße 1",
+      "postalCode": "52062",
+      "city": "Aachen",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "Europe"
     },
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "midudev",
-        "url": "https://linkedin.com/in/midudev"
-      },
-      {
-        "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
+        "username": "orwa84",
+        "shortcut": "K",
+        "url": "https://www.linkedin.com/in/orwa84/"
       },
       {
         "network": "GitHub",
-        "username": "midudev",
-        "url": "https://github.com/midudev"
+        "username": "diraneyya",
+        "shortcut": "H",
+        "url": "https://github.com/diraneyya"
+      },
+      {
+        "network": "GitLab",
+        "username": "diraneyya",
+        "shortcut": "L",
+        "url": "https://gitlab.com/diraneyya"
+      },
+      {
+        "network": "Medium",
+        "username": "orwa.diraneyya",
+        "shortcut": "I",
+        "url": "https://medium.com/@orwa.diraneyya"
+      },
+      {
+        "network": "Mastodon",
+        "username": "arabiccola@mastodon.social",
+        "shortcut": "O",
+        "url": "https://mastodon.social/@arabiccola"
+      },
+      {
+        "network": "ProtonMail",
+        "username": "info@orwa.tech",
+        "url": "mailto:info@orwa.tech"
+      },
+      {
+        "network": "CalCom",
+        "username": "Orwa",
+        "shortcut": "M",
+        "url": "https://cal.com/orwa-d-ncvlhu"
       }
     ]
   },
   "work": [
     {
-      "name": "midudev",
-      "position": "Divulgador sobre Programación Web",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2021-01-01",
-      "endDate": null,
-      "summary": "Streamer de programación más visto en Español en Twitch. +1 millón de seguidores entre todas mis redes sociales. Reconocido por Google, Microsoft y GitHub por mi impacto en la comunidad de desarrolladores.",
+      "name": "Autohaus Twardowski GmbH (Wegberg)",
+      "position": "Open-Source Advocacy Consultant",
+      "freelance": true,
+      "url": "https://www.autohaus-twardowski.de/",
+      "startDate": "2024-09-01",
+      "endDate": "2024-12-01",
+      "summary": "Conceptualized and planned an ERP solution using open-source software.",
       "highlights": [
-        "Started the company"
+        "Performed an extensive study to ensure that the Frappe Framework (ERPNext) was able to meet the client's full requirements.",
+        "Planned an OBD-II hardware integration to check vehicles in automatically when received, and possible monitor their location until they are sold and delivered."
       ]
     },
     {
-      "name": "Adevinta",
-      "position": "Lead Frontend Architect",
-      "url": "https://twitch.tv/midudev",
-      "startDate": "2016-06-01",
-      "endDate": "2022-09-01",
-      "summary": "Lideré una convergencia técnica entre diferentes productos y migramos una arquitectura monolítica a otra más flexible y optimizada. Fomenté buenas prácticas y mejoras en la cultura de rendimiento, además de la entrega rápida de valor a los usuarios.",
+      "name": "Reboot Mobility GmbH (Cologne)",
+      "position": "Open-Source Advocacy Consultant",
+      "freelance": true,
+      "url": "https://evemo.de/",
+      "startDate": "2024-02-01",
+      "endDate": "2024-08-01",
+      "summary": "Created a BI dashboard as a feature to their core product using open-source software.",
       "highlights": [
-        "Started the company"
+        "Built a business-intelligence cockpit using Apache Superset",
+        "Created SQL expressions to drive charts and diagrams in the cockpit dashboard."
       ]
     },
     {
-      "name": "Hubii",
-      "position": "Senior FrontEnd Developer",
-      "startDate": "2011-03-01",
-      "endDate": "2016-05-01",
-      "summary": "Desarrollé una plataforma de noticias geolocalizadas y una API para consumir la información. Escalé los servicios para soportar la carga de más de cientos de miles de peticiones al día. Recorté los tiempos de entrega y despliegues a producción a la mitad. Colaboré con Mozilla y Telefónica para desarrollar la primera app para televisores con FirefoxOS.",
+      "name": "Wild Code School (Berlin)",
+      "position": "Full-Stack Instructor",
+      "url": "https://www.wildcodeschool.com/",
+      "startDate": "2022-05-01",
+      "endDate": "2023-05-01",
+      "summary": "Taught full-stack web development to 2 student cohorts.",
       "highlights": [
-        "Started the company"
+        "Led an industry collaboration with REMONDIS group, leading to a professional app prototype.",
+        "Created teaching tools using a JS compiler (Babel) to explain functions and loops, using inlining/unwinding transformations."
+      ]
+    },
+    {
+      "name": "RWTH University Aachen",
+      "position": "Scientific Employee",
+      "url": "https://www.rwth-aachen.de/",
+      "startDate": "2019-06-01",
+      "endDate": "2022-06-01",
+      "summary": "Taught, collaborated, and maintained IT infrastructure.",
+      "highlights": [
+        "Drafted the innovation strategy for the Construction Robotics Masters, which was officially adopted.",
+        "Designed interdisciplinary courses which introduced students to GitLab, containers, and unpackaged software.",
+        "Led and managed the development of a cutting-edge UHF RFID system contracted by PORR and 3 other construction companies.",
+        "Maintained the institute's IT infrastructure, including migrating data (ZFS), and implementing ActiveDirectory in classrooms."
+      ]
+    },
+    {
+      "name": "Precise Trading LLC (Dubai)",
+      "position": "Technical and Maintenance Manager",
+      "url": "https://preciseme.com/",
+      "startDate": "2018-04-01",
+      "endDate": "2019-02-01",
+      "summary": "Led the maintenance/tech-support regional team.",
+      "highlights": [
+        "Optimized the 3D printer training/ticketing process for our MEA (i.e. Middle East and Africa) maintenance partners."
+      ]
+    },
+    {
+      "name": "TechShop Inc. (Abu Dhabi)",
+      "position": "Dream (i.e. prototyping) Consultant",
+      "url": "https://www.instagram.com/makeabudhabi/",
+      "startDate": "2015-02-01",
+      "endDate": "2018-03-01",
+      "summary": "Started as part-time then became a full-time consultant in the makerspace.",
+      "key_responsibilities": [
+        "Taught over 200 group classes in 3D printing, laser cutting, CNC routing/milling, 2D/3D design, the use of the plotter, plastic forming, metal working, woodworking, and electronics.",
+        "Developed router, casting, vacuum-forming, laser-cutting, CNC milling, and sheet metal show pieces, design examples, and instruction for makerspace members. "
+      ]
+    },
+    {
+      "name": "Originbase LLC (Dubai)",
+      "position": "Community Development Manager",
+      "url": "https://www.instagram.com/originbase",
+      "startDate": "2015-02-01",
+      "endDate": "2017-03-01",
+      "summary": "Started the makerspace along with 2 other people.",
+      "key_responsibilities": [
+        "Taught over 100 group classes in rapid prototyping.",
+        "Revived the lost-wax casting equipment, which remained in storage for years, and used it to conduct jewellery-making workshops in the makerspace."
+      ]
+    },
+    {
+      "name": "International School of Applied Sciences (Dubai)",
+      "position": "Elementary/Middle/High-School Teacher",
+      "url": "https://almawakeb.sch.ae/",
+      "startDate": "2013-01-01",
+      "endDate": "2015-02-01",
+      "summary": "Worked as an elementary/mid-school, then as a high-school, teacher.",
+      "key_responsibilities": [
+        "Taught the ICDL curriculum to elementary, middle and high-school students.",
+        "Started an afterschool club in electronics and robotics."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "King Fahd University for Petroleum and Minerals (KFUPM), Dhahran (Saudi Arabia)",
+      "url": "https://kfupm.edu.sa/",
+      "area": "Computer Engineering",
+      "studyType": "Master of Science (M.Sc.)",
+      "startDate": "2007-01-01",
+      "endDate": "2012-01-01",
+      "score": "3.313",
+      "courses": [
+          "Computer Architecture",
+          "Principles of VLSI Design",
+          "Digital System Design & Synthesis",
+          "Analogue Integrated Circuit Design",
+          "Computer Arithmetic",
+          "Computer Networks",
+          "Local & Metropolitan Area Networks",
+          "Database Design & Implementation"
+      ]
+    },
+    {
+      "institution": "Al-Balqaa' Applied University (BAU), As-Salt City (Jordan)",
+      "url": "https://bau.edu.jo/index.aspx",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor of Science (B.Sc.)",
+      "startDate": "2002-01-01",
+      "endDate": "2007-01-01",
+      "score": "2.94",
+      "courses": [
+        "Computer Skills C++",
+        "Object Oriented Programming",
+        "Computer Architecture & Organization",
+        "Advanced Programming",
+        "Digital Electronics",
+        "Engineering Drawing",
+        "Data Structures and Algorithms",
+        "Microprocessor Systems",
+        "Database Systems",
+        "Design of Digital Systems",
+        "Computer Graphics",
+        "Operating Systems",
+        "Digital Signal Processing"
       ]
     }
   ],
   "volunteer": [{
-    "organization": "Organization",
+    "organization": "Meffi.s Aachen",
     "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
+    "url": "https://www.meffis.org/",
+    "startDate": "2022-11-01",
+    "endDate": "present",
+    "summary": "Acts as a lead barista and a member of the repair-cafe team.",
     "highlights": [
-      "Awarded 'Volunteer of the Month'"
+      "Conducted various barista workshops on basic espresso brewing, milk-steaming for latte art, cappuccino style, pouring technique, and hot-chocolate art.",
+      "Currently designing a new website for the repair cafe.",
+      "For a year, have been conducting weekly classes to a 15-year old in Ghana spanning subjects such as financial management, professional communication, graphics design, text editing, markdown, GitHub, and using the Linux terminal. The laptop used by the juvenile was sent to Ghana from Germany."
     ]
   }],
-  "education": [{
-    "institution": "Universitat Oberta de Catalunya",
-    "url": "https://www.uoc.edu/portal/es/index.html",
-    "area": "Ingeniero de Software",
-    "studyType": "Bachelor",
-    "startDate": "2003-01-01",
-    "endDate": "2009-01-01",
-    "score": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
-  }],
-  "skills": [
+  "certifications": [
     {
-      "name": "HTML",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend"
-      ]
+      "name": "Foundations for Humane Technology",
+      "date": "2021-11-01",
+      "issuer": "Center for Humane Technology (USA)",
+      "url": "https://www.humanetech.com/"
     },
     {
-      "name": "CSS",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Diseño Responsive"
-      ]
-    },
-    {
-      "name": "JavaScript",
-      "level": "Master",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
-      ]
-    },
-    {
-      "name": "Tailwind",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
-      ]
-    },
-    {
-      "name": "TypeScript",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Node",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
-      ]
-    },
-    {
-      "name": "MySQL",
-      "level": "Avanzado",
-      "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
-      ]
-    },
-    {
-      "name": "Git",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente"
-      ]
-    },
-    {
-      "name": "GitHub",
-      "level": "Avanzado",
-      "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
-      ]
+      "name": "CCNA, Fundamentals of Networking",
+      "date": "2014-05-15",
+      "issuer": "CISCO Networking Academy (Dubai)",
+      "url": "https://www.netacad.com/"
     }
   ],
   "languages": [
     {
-      "language": "Spanish",
+      "language": "English",
       "fluency": "Native speaker"
     },
     {
-      "language": "English",
-      "fluency": "Advanced"
+      "language": "Arabic",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "German",
+      "fluency": "B1"
+    },
+    {
+      "language": "Dutch",
+      "fluency": "A1"
     }
   ],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
+  "interests": [
+    "Cloud deployments",
+    "Open Source Projects",
+    "Entrepreneurship",
+    "Proxmox",
+    "Education",
+    "Edutainment",
+    "Assembly"
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    { "name": "Git" },
+    { "name": "Bash" },
+    { "name": "C/C++" },
+    { "name": "Rust" },
+    { "name": "Go" },
+    { "name": "Python" },
+    { "name": "Ruby" },
+    { "name": "Perl" },
+    { "name": "Lua" },
+    { "name": "PHP" },
+    { "name": "Java" },
+    { "name": "WASM" },
+    { "name": "ASP.NET" },
+    { "name": "HTML5" },
+    { "name": "CSS3" },
+    { "name": "Javascript" },
+    { "name": "Typescript" },
+    { "name": "React" },
+    { "name": "Node" },
+    { "name": "Bun" },
+    { "name": "Deno" },
+    { "name": "MySQL" },
+    { "name": "PostgreSQL" },
+    { "name": "MongoDB" },
+    { "name": "GitHub Actions" },
+    { "name": "GitLab CI/CD" },
+    { "name": "Jenkins" },
+    { "name": "Next" },
+    { "name": "Astro" },
+    { "name": "Tailwind" },
+    { "name": "Compose/Compose/Swarm", "icon": "Docker" },
+    { "name": "Traefik" },
+    { "name": "K8s" },
+    { "name": "Ansible" },
+    { "name": "Terraform" },
+    { "name": "Grafana" },
+    { "name": "InfluxDB" },
+    { "name": "Prometheus" },
+    { "name": "Node-RED" },
+    { "name": "Apache Superset" },
+    { "name": "MQTT" },
+    { "name": "HTTP/HTTPS" }
+  ],
   "projects": [
     {
-      "name": "mars.codes",
-      "isActive": true,
-      "description": "Historia interactiva con retos de programación para viajar a Marte",
-      "highlights": [
-        "Elige tu propia aventura",
-        "En desarrollo"
+      "name": "Excavator Simulator with Inverse Kinematics and Hydraulic Modelling",
+      "isActive": false,
+      "description": [
+        "Developed a browser-based real-time simulation of a hydraulic excavator to enhance Construction Robotics Master's coursework at RWTH Aachen.",
+        "Enabled remote MQTT control for students, featuring inverse-kinematic (XYZ) trajectory planning and precise hydraulic system modeling.",
+        "Achieved high-fidelity simulation by compiling Simulink/ikfast C++ models into WebAssembly, which ran seamlessly using a webworker."
       ],
-      "url": "https://mars.codes"
-    },
-    {
-      "name": "AdventJS",
-      "isActive": true,
-      "description": "Retos de programación en JavaScript para cada día de diciembre hasta Navidad",
+      "image": "https://gitlab.com/uploads/-/system/project/avatar/36845334/virtual-programming-lab.png?width=192",
       "highlights": [
-        "+1 millón de visitas",
-        "Multidioma",
-        "JavaScript & TypeScript"
+        "Simulink",
+        "ikfast",
+        "URDF",
+        "Three.js",
+        "MQTT",
+        "WASM",
+        "web worker",
+        "emscripten",
+        "C/C++",
+        "robotics",
+        "Digital-Twin",
+        "Node-RED",
+        "Education",
+        "Demo"
       ],
-      "url": "https://adventjs.dev"
-    },
-    {
-      "name": "Codember",
-      "isActive": true,
-      "description": "Juego interactivo de programación con retos y secretos",
-      "highlights": [
-        "+2000 usuarios activos",
-        "Retos para cualquier lenguaje"
-      ],
-      "url": "https://codember.dev"
-    },
-    {
-      "name": "codi.link",
-      "isActive": true,
-      "description": "Playground de código HTML, CSS y JavaScript para compartir",
-      "highlights": [
-        "100k visitas al mes",
-        "Desarrollado por la comunidad"
-      ],
-      "url": "https://codi.link",
-      "github": "https://github.com/midudev/codi.link"
-    },
-    {
-      "name": "Pruebas Técnicas",
-      "isActive": true,
-      "description": "Lista de pruebas técnicas de empresas para practicar programación",
-      "highlights": [
-        "100% gratuito",
-        "+500 soluciones de la comunidad"
-      ],
-      "url": "https://pruebastecnicas.com",
-      "github": "https://github.com/midudev/pruebas-tecnicas"
-    },
-    {
-      "name": "miduConf",
-      "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
-      "highlights": [
-        "+15k tickets repartidos",
-        "+50k espectadores en directo"
-      ],
-      "url": "https://miduconf.com"
+      "url": "https://rwth-crmasters-sose22.gitlab.io/course-material/excavator-simulator/simple.html",
+      "gitlab": "https://gitlab.com/rwth-crmasters-sose22/course-material/excavator-simulator",
+      "github": null
     }
   ]
 }

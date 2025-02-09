@@ -7,6 +7,13 @@
       "runOptions": {
         "runOn": "folderOpen"
       },
+      "problemMatcher": [],
+      "label": "npm: dev",
+      "detail": "astro dev",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }

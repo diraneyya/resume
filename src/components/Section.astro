@@ -1,15 +1,15 @@
 ---
-// se ejecuta en el servidor o en build time <----
+// is executed on the server or at build time <----
 const { title } = Astro.props
 ---
 
-<section>
+<section title="Summary">
   {title && <h2>{title}</h2>}
   <slot />
 </section>
 
 <script>
-  // se ejecuta en el cliente <----
+  // is executed on the client <----
 </script>
 
 <style>
