@@ -1,7 +1,7 @@
 ---
-import { extractDirectives } from "astro/runtime/server/hydration.js";
+// import { extractDirectives } from "astro/runtime/server/hydration.js";
 import Section from "../Section.astro"
-import Freelance from "@/icons/freelance.astro"
+// import Freelance from "@/icons/freelance.astro"
 import { work } from "@cv"
 ---
 
@@ -9,7 +9,7 @@ import { work } from "@cv"
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, highlights, freelance, url }) => {
+        ({ name, startDate, endDate, position, summary, freelance, url }) => {
 
           // local helper for converting dates to strings
           const _ = (date : Date) => `${date.getFullYear()}`
