@@ -4,28 +4,42 @@ import Section from "../Section.astro"
 import { education } from "@cv"
 ---
 
-<Section title="Educación">
+<Section title="Education">
   <ul>
     {
-      education.map(({ institution, startDate, endDate, area }) => {
-        const startYear = new Date(startDate).getFullYear()
-        const endYear =
-          endDate != null ? new Date(endDate).getFullYear() : "Actual"
-        const years = `${startYear} - ${endYear}`
+      education.map(({ institution, url, studyType, startDate, endDate, area, courses }) => {
+        const dateStart = new Date(startDate)
+        let dateEnd = new Date(endDate)
+        const startYear = dateStart.getFullYear()
+        let endYear : string | number = "present"
+        if (isFinite(dateEnd.valueOf()))
+          endYear = dateEnd.getFullYear()
+        else
+          dateEnd = new Date();
+
+        const millisDuration = dateEnd.getTime() - dateStart.getTime();
+        const monthsDuration = millisDuration / 1000 / 60 / 60 / 24 / 30
+        const yearsDuration = Math.round(monthsDuration / 6) * 6 / 12
 
         return (
           <li>
             <article>
               <header>
                 <div>
-                  <h3>{institution}</h3>
+                  <h3><a href={url} title="Go to university's homepage" target="_blank">{institution}</a></h3>
+                  <h4>{studyType} in {area}</h4>
                 </div>
 
-                <time>{years}</time>
+                <div>
+                  <time datetime={startDate}>{startYear}</time>{
+                    endYear !== startYear && <>{' - '}<time
+                      datetime={endDate}>{endYear}</time></>
+                  }<summary>({yearsDuration} year{ yearsDuration > 1 ? 's' : ''})</summary>
+                </div>
               </header>
 
               <footer>
-                <p>{area}</p>
+                <p>{courses.join(' · ')}</p>
               </footer>
             </article>
           </li>
@@ -54,10 +68,21 @@ import { education } from "@cv"
     margin-bottom: 4px;
   }
 
-  time {
+  time, summary {
     color: #555;
     font-size: 0.85rem;
     min-width: 102px;
+    cursor: default;
+  }
+
+  summary {
+    font-weight: 300;
+    opacity: 0.66;
+  }
+
+  footer > p {
+    font-size: 0.7rem;
+    font-weight: 300;
   }
 
   @media (width <= 700px) {

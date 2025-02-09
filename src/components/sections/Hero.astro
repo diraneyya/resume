@@ -2,20 +2,30 @@
 import { basics } from "@cv"
 import Section from "@/components/Section.astro"
 import Mail from "@/icons/Mail.astro"
+import ProtonMail from "@/icons/ProtonMail.astro"
 import Phone from "@/icons/Phone.astro"
-import X from "@/icons/X.astro"
+import Bluesky from "@/icons/bluesky.astro"
+import Mastodon from "@/icons/mastodon.astro"
+import Medium from "@/icons/medium.astro"
 import LinkedIn from "@/icons/LinkedIn.astro"
 import GitHub from "@/icons/GitHub.astro"
+import GitLab from "@/icons/GitLab2.astro"
+import CalCom from "@/icons/calcom.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 import type { SocialIcon } from "@/types"
 
 const { name, label, image, location, profiles, phone, email } = basics
-const { city, region } = location
+const { city, country, region } = location
 
 const SOCIAL_ICONS: SocialIcon = {
   GitHub,
   LinkedIn,
-  X,
+  GitLab,
+  Mastodon,
+  Medium,
+  Bluesky,
+  ProtonMail,
+  CalCom,
 }
 
 const linkedInfo = profiles.find(({ network }) => network === "LinkedIn")
@@ -27,11 +37,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
 <Section>
   <div class="container">
     <div class="info">
-      <h1>{name}</h1>
+      <h1 class="print">{name}</h1>
+      <h1 class="no-print shiny_text">{name}</h1>
       <h2>{label}</h2>
       <span>
         <WorldMap />
-        {city}, {region}
+        {city} ({country}), {region}
       </span>
       <footer class="print">
         {printInfo}
@@ -41,7 +52,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
           email && (
             <a
               href={`mailto:${email}`}
-              title={`Enviar un correo electrónico a ${name} al correo ${email}`}
+              title={`Send an email to ${name} at ${email}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -53,7 +64,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
           phone && (
             <a
               href={`tel:${phone}`}
-              title={`Llamar por teléfono a ${name} al número ${phone}`}
+              title={`Call ${name} on the number ${phone}`}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -68,7 +79,7 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
             return (
               <a
                 href={url}
-                title={`Visitar el perfil de ${name} en ${network}`}
+                title={`${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -103,11 +114,12 @@ const printInfo = [email, phone, linkedUrl].filter(Boolean).join(" • ")
 
   h1 {
     font-size: 2rem;
+    font-weight: 700;
   }
 
   h2 {
     color: #444;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 1.1rem;
     text-wrap: balance;
   }

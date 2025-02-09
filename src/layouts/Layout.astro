@@ -39,14 +39,48 @@ const { image, summary, url } = basics
 </html>
 
 <style is:global>
+
+  /* Geist-Mono 300 served from a local file: latin-ext charset */
+  @font-face {
+    font-family: 'Geist Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/geist-mono-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* Geist-Mono 300 served from a local file: latin charset */
+  /* (this woff2 font file is modified to have narrower spaces) */
+  @font-face {
+    font-family: 'Geist Mono';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/geist-mono.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* Geist-Mono 500 served from a local file: latin charset */
+  /* (this woff2 font file is modified to have narrower spaces) */
+  @font-face {
+    font-family: 'Geist Mono';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/geist-mono-bold.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
   html {
     font-family:
+      "Geist Mono",
       Menlo,
       Monaco,
       Lucida Console,
       "Courier New",
       Courier,
       monospace;
+    font-weight: 300;
     background: #fff;
     letter-spacing: -0.025rem;
   }
@@ -120,5 +154,54 @@ const { image, summary, url } = basics
     article {
       break-inside: avoid;
     }
+  }
+
+  .shiny_text, .shiny_bg {
+    background-image: linear-gradient(
+      115deg, 
+      #0000 0%, 
+      #0000 20%, 
+      #fff9 20%, 
+      #0000 60%
+    );
+    background-origin: padding-box;
+    background-repeat: repeat;
+    background-size: 200%;
+    background-position-x: 100%;
+  }
+
+  .shiny_text {
+    color: transparent;
+    background-clip: text;
+    background-color: black;
+  }
+
+  .shiny_bg {
+    background-clip: padding-box;
+  }
+
+  .shiny_bg:hover svg {
+    animation: shine2 0.45s;
+    animation-timing-function: ease-in;
+  }
+
+  @keyframes shine {
+		100% {
+			background-position-x: -100%;
+		}
+	}
+
+  @keyframes shine2 {
+		20% {
+			color: #fff;
+		}
+    100% {
+      color: inherit;
+    }
+	}
+
+  .shiny_text:hover, .shiny_bg:hover {
+    animation: shine 0.45s;
+    animation-timing-function: ease-out;
   }
 </style>

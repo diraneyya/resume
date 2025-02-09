@@ -1,33 +1,31 @@
-
-
 <div align="center">
 <img src="logo.png" height="90px" width="auto" /> 
 <h2>
-    <em>Résumé</em> minimalista maquetado para web y pdf
+    <em>Minimalist Resume/CV Layout for Web and PDF</em>
 </h2>
 <p>
-Esquema del JSON de CV de <a href="https://jsonresume.org/schema/">jsonresume.org</a>
+JSON CV schema from <a href="https://jsonresume.org/schema/">jsonresume.org</a>
 </p>
 
 
 <p>
-Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a>
+Based on design by <a href="https://github.com/BartoszJarocki/cv">Bartosz Jarocki</a>
 
 </p>
 
 </div>
 
 <div align="center">
-    <a href="#🚀-empezar">
-        Empezar
+    <a href="#-getting-started">
+        Getting Started
     </a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#🧞-comandos">
-        Comandos
+    <a href="#-commands">
+        Commands
     </a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#🔑-licencia">
-        Licencia
+    <a href="#-license">
+        License
     </a>
     <span>&nbsp;✦&nbsp;</span>
     <a href="https://midu.dev">
@@ -50,55 +48,50 @@ Basado en el diseño de <a href="https://github.com/BartoszJarocki/cv">Bartosz J
 
 <img src="portada.png"></img>
 
-## 🛠️ Stack
+## 🛠️ Tech Stack
 
-- [**Astro**](https://astro.build/) - El framework web de la nueva época.
-- [**Typescript**](https://www.typescriptlang.org/) - JavaScript con sintaxis de tipado.
-- [**Ninja Keys**](https://github.com/ssleptsov/ninja-keys) - Menu desplegable con atajos de teclado hecho en puro Javascript.
+- [**Astro**](https://astro.build/) - The modern web framework
+- [**Typescript**](https://www.typescriptlang.org/) - Type syntax for JavaScript
+- [**Ninja Keys**](https://github.com/ssleptsov/ninja-keys) - Pure JavaScript keyboard shortcut dropdown
+
+## 🚀 Getting Started
+
+### 1. Use this [repo](https://github.com/midudev/minimalist-portfolio-json) as an Astro project template
 
 
-## 🚀 Empezar
-
-### 1. Usa este [repo](https://github.com/midudev/minimalist-portfolio-json) como _template_ de un proyecto de Astro
-
-
-- Yo uso [pnpm](https://pnpm.io/installation) como gestor de dependencias y empaquetador.
+- I use [pnpm](https://pnpm.io/installation) as package manager
 
 ```bash
-# Activa pnpm en MacOS, WSL & Linux:
+# Enable pnpm on MacOS, WSL & Linux:
 corepack enable
 corepack prepare pnpm@latest --activate
 
-# Inicializa el proyecto
+# Initialize project
 pnpm create astro@latest -- --template midudev/minimalist-portfolio-json
 ```
 
-### 2. Añade tu contenido:
-Edita el archivo `cv.json` para crear tu propio Portafolio/CV imprimible.
-### 3. Lanza el servidor de desarrollo:
+### 2. Add your content:
+Edit the `cv.json` file to create your printable Portfolio/CV
+### 3. Start dev server:
 
 ```bash
-# Disfruta del resultado
+# See the result
 pnpm dev
 ```
 
 
-1. Abre [**http://localhost:4321**](http://localhost:4321/) en tu navegador para ver el resultado 🚀
+1. Open [**http://localhost:4321**](http://localhost:4321/) in your browser to view 🚀
 
 
-## 🧞 Comandos
+## 🧞 Commands
 
-|     | Comando          | Acción                                        |
+|     | Command          | Action                                        |
 | :-- | :--------------- | :-------------------------------------------- |
-| ⚙️  | `dev` o `start` | Lanza un servidor de desarrollo local en  `localhost:4321`.  |
-| ⚙️  | `build`          | Comprueba posibles errores y hace un empaquetado de producción en `./dist/`.      |
-| ⚙️  | `preview`        | Vista previa en local `localhost:4321` |
+| ⚙️  | `dev` or `start` | Starts local dev server at `localhost:4321`  |
+| ⚙️  | `build`          | Builds production bundle to `./dist/`        |
+| ⚙️  | `preview`        | Local preview of production build            |
 
 
+## 🔑 License
 
-## 🔑 Licencia
-
-[MIT](LICENSE.txt) - Creado por [**midudev**](https://midu.dev).
-
-
-
+[MIT](LICENSE.txt) - Created by [**midudev**](https://midu.dev).

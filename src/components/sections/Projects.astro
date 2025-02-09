@@ -1,36 +1,39 @@
 ---
 import GitHub from "@/icons/GitHub.astro"
+import GitLab from "@/icons/GitLab.astro"
 import Section from "../Section.astro"
 
 import { projects } from "@cv"
 ---
 
-<Section title="Proyectos">
+<Section title="Work Samples">
   <ul>
     {
       projects.map(
-        ({ url, description, highlights, name, isActive, github }) => {
+        ({ url, image, description, highlights, name, isActive, github, gitlab }) => {
+          
           return (
             <li>
               <article>
                 <header>
                   <h3>
-                    <a href={url} target="_blank" title={`Ver el proyecto ${name}`}>
+                    { image && <img src={image} /> }
+                    <a href={url} target="_blank" title={`Goto demo`}>
                       {name}
                     </a>
                     {isActive && <span>•</span>}
-                    {github && (
+                    {(github || gitlab) && (
                       <a
                         class="github-code-link"
-                        href={github}
+                        href={github || gitlab}
                         target="_blank"
-                        title={`Ver código fuente del proyecto ${name}`}
+                        title={`Goto source`}
                       >
-                        <GitHub />
+                        <span class="gitIcon">{ (github && <GitHub />) || <GitLab /> }</span>
                       </a>
                     )}
                   </h3>
-                  <p>{description}</p>
+                  <ul>{description.map(p => <li>{p}</li>)}</ul>
                 </header>
                 <footer>
                   {highlights.map((highlight) => {
@@ -47,7 +50,7 @@ import { projects } from "@cv"
 </Section>
 
 <style>
-  ul {
+  section > ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
@@ -80,18 +83,33 @@ import { projects } from "@cv"
     text-decoration: underline;
   }
 
-  article p {
+  article p, article > header > ul > li {
     font-size: 0.75rem;
     line-height: 1.2rem;
     margin-bottom: 4px;
+    opacity: 0.5;
+  }
+
+  article > header > ul {
+    margin-right: 72px;
+    margin-top: 0.5rem;
+    margin-left: 2ch;
+    list-style: disc outside;
   }
 
   article h3 span {
     color: rgb(0, 188, 47);
     animation-name: flicker;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
+  }
+
+  article h3 img {
+    float: right;
+    height: 64px;
+    opacity: 0.66;
+    filter:hue-rotate(90deg);
   }
 
   footer {
@@ -114,12 +132,17 @@ import { projects } from "@cv"
     margin-left: 5px;
   }
 
+  span.gitIcon {
+    position: relative;
+    top: +0.2rem;
+  }
+
   @keyframes flicker {
     0% {
       opacity: 1;
     }
     50% {
-      opacity: 0.25;
+      opacity: 0.5;
     }
     100% {
       opacity: 1;
@@ -127,7 +150,7 @@ import { projects } from "@cv"
   }
 
   @media (width <= 700px) {
-    ul {
+    section > ul {
       margin-inline: 0px;
     }
 
@@ -140,6 +163,7 @@ import { projects } from "@cv"
 
   @media print {
     article h3 span {
+      color: black;
       animation-name: none;
     }
   }
