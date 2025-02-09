@@ -4,7 +4,11 @@
   "version": "0.0.2",
   "author": "Miguel Ángel Durán (@midudev@GitHub)",
   "contributors": [
-    { "name": "Orwa Diraneyya", "email": "info@orwa.tech", "url": "https://orwa.tech" }
+    {
+      "name": "Orwa Diraneyya",
+      "email": "info@orwa.tech",
+      "url": "https://orwa.tech"
+    }
   ],
   "repository": {
     "type": "git",
@@ -15,6 +19,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "preview:cloudflare": "astro check && astro build && wrangler pages dev ./dist",
     "astro": "astro"
   },
   "dependencies": {
@@ -22,5 +27,8 @@
     "astro": "latest",
     "hotkeypad": "^0.1.0",
     "typescript": "latest"
+  },
+  "devDependencies": {
+    "wrangler": "^3.107.3"
   }
 }
