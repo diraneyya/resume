@@ -9,7 +9,7 @@ import { work } from "@cv"
   <ul>
     {
       work.map(
-        ({ name, startDate, endDate, position, summary, freelance, url }) => {
+        ({ name, startDate, endDate, position, summary, highlights, freelance, url }) => {
 
           // local helper for converting dates to strings
           const _ = (date : Date) => `${date.getFullYear()}`
@@ -76,6 +76,9 @@ import { work } from "@cv"
 
                 <footer>
                   <p>{summary}</p>
+                  {
+                    highlights && <ul>{ highlights.map(sentence => <li>{sentence}</li>) }</ul>
+                  }
                 </footer>
               </article>
             </li>
@@ -87,7 +90,7 @@ import { work } from "@cv"
 </Section>
 
 <style>
-  ul {
+  section > ul {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -145,6 +148,24 @@ import { work } from "@cv"
 
   mark > span {
     color: #444;
+  }
+
+  footer > ul > li {
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    margin-bottom: 4px;
+    opacity: 0.5;
+  }
+
+  footer > ul {
+    margin-right: 72px;
+    margin-top: 0.5rem;
+    margin-left: 2ch;
+    list-style: disc outside;
+  }
+
+  footer:last-child {
+    margin-bottom: 0.75rem;
   }
 
   [data-title]:hover:after {
