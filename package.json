@@ -14,13 +14,12 @@
     "type": "git",
     "url": "https://github.com/diraneyya/resume.git"
   },
-  "packageManager": "pnpm@9.10.0",
   "scripts": {
     "dev": "astro preferences disable devToolbar && astro dev --host",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "preview:cloudflare": "astro check && astro build && wrangler pages dev ./dist",
+    "preview:cloudflare": "astro check && astro build && wrangler pages dev ./dist  ",
     "astro": "astro"
   },
   "dependencies": {
