@@ -146,7 +146,7 @@ const profilesInfo = profiles
               'font-weight:bold;background:green;color:white');
             console.log(`%c${textareaPublicKey.value}`, 'background:#eee;color:green');
           }).catch((error) => {
-            console.error(`%cCould not copy PGP key to clipboard, copy manually:`, 
+            console.error(`%cCould not copy PGP key to clipboard (error: ${error}), copy manually:`, 
               'font-weight:bold;background:maroon;color:white');
             console.log(`%c${textareaPublicKey.value}`, 'background:#eee;color:red');
           });
