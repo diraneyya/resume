@@ -14,6 +14,7 @@ import ShortcutIcon from "@/icons/Shortcut.astro"
 import PrintIcon from "@/icons/Print.astro"
 import SourceCodeIcon from "@/icons/git.astro"
 import PublicKeyIcon from "@/icons/publickey.astro"
+import PDFIcon from "@/icons/pdf.astro"
 import { basics } from "@cv"
 import { repository } from "package.json"
 import PGPPublicKeyText from "@public/public.pgp?raw"
@@ -67,6 +68,7 @@ const profilesInfo = profiles
   <div id="icon-print"><PrintIcon /></div>
   <div id="icon-sourcecode"><SourceCodeIcon /></div>
   <div id="icon-publickey"><PublicKeyIcon /></div>
+  <div id="icon-pdf"><PDFIcon /></div>
   <textarea id="text-publickey">{PGPPublicKeyText}</textarea>
 </div>
 
@@ -93,7 +95,7 @@ const profilesInfo = profiles
         id,
         title,
         icon,
-        hotkey: `ctrl+${hotkey.toLowerCase()}`,
+        hotkey: `${hotkeypad.activationKey.toLowerCase()}+${hotkey.toLowerCase()}`,
         section,
         handler: () => {
           window.open(url, "_blank")
@@ -115,22 +117,11 @@ const profilesInfo = profiles
       window.print()
     }
   })
-  if (sourceCodeUrl?.startsWith('http')) essentialCommands.push({
-    id: "Show source",
-    title: "Source code",
-    icon: document.getElementById("icon-sourcecode")?.innerHTML,
-    hotkey: `ctrl+e`,
-    section: "Action",
-    handler: () => {
-      window.open(sourceCodeUrl, "_blank")
-    }
-  }); else console.error(`Source code not found (repository.url='${sourceCodeUrl}')`)
-
   essentialCommands.push({
     id: "pgp key",
     title: "Copy Public PGP Key",
     icon: document.getElementById("icon-publickey")?.innerHTML,
-    hotkey: `ctrl+g`,
+    hotkey: `${hotkeypad.activationKey.toLowerCase()}+g`,
     section: "Action",
     handler: () => {
       const textareaPublicKey = document.getElementById("text-publickey");
@@ -157,10 +148,54 @@ const profilesInfo = profiles
     }
   })
 
+  if (sourceCodeUrl?.startsWith('http')) essentialCommands.push({
+    id: "Show source",
+    title: "Source code",
+    icon: document.getElementById("icon-sourcecode")?.innerHTML,
+    hotkey: `${hotkeypad.activationKey.toLowerCase()}+e`,
+    section: "Download",
+    handler: () => {
+      window.open(sourceCodeUrl, "_blank")
+    }
+  }); else console.error(`Source code not found (repository.url='${sourceCodeUrl}')`)
+
+  essentialCommands.push({
+    id: "Resume PDF",
+    title: "Resume in English",
+    icon: document.getElementById("icon-pdf")?.innerHTML,
+    hotkey: `${hotkeypad.activationKey.toLowerCase()}+u`,
+    section: "Download",
+    handler: () => {
+      window.open("/en.pdf", "_blank")
+    }
+  })
+
+  essentialCommands.push({
+    id: "Lebenslauf PDF",
+    title: "Lebenslauf herunterladen",
+    icon: document.getElementById("icon-pdf")?.innerHTML,
+    hotkey: `${hotkeypad.activationKey.toLowerCase()}+j`,
+    section: "Download",
+    handler: () => {
+      window.open("/de.pdf", "_blank")
+    }
+  })
+
   hotkeypad.setCommands([
     ...essentialCommands,
     ...data
   ])
+
+  if (sourceCodeUrl?.startsWith('http')) essentialCommands.push({
+    id: "Show source",
+    title: "Source code",
+    icon: document.getElementById("icon-sourcecode")?.innerHTML,
+    hotkey: `${hotkeypad.activationKey.toLowerCase()}+e`,
+    section: "Download",
+    handler: () => {
+      window.open(sourceCodeUrl, "_blank")
+    }
+  }); else console.error(`Source code not found (repository.url='${sourceCodeUrl}')`)
 
   const footerButton = document.getElementById("footer-button")
   footerButton?.addEventListener("click", () => {
