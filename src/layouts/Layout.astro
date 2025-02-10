@@ -139,6 +139,18 @@ const { image, summary, url } = basics
     display: none !important;
   }
 
+  @page {
+      size: portrait;
+      margin: 5%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      page-orientation: upright;
+  }
+
+  @page :first {
+    margin-top: 5%;
+  }
+
   @media print {
     .no-print {
       display: none !important;
