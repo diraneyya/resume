@@ -124,6 +124,7 @@ const { image, summary, url } = basics
       "Open Sans",
       "Helvetica Neue",
       sans-serif;
+    page-break-after: avoid !important;
   }
 
   p {
@@ -153,6 +154,10 @@ const { image, summary, url } = basics
 
     article {
       break-inside: avoid;
+    }
+
+    .print-together {
+      page-break-inside: avoid !important;
     }
   }
 
@@ -200,8 +205,14 @@ const { image, summary, url } = basics
     }
 	}
 
-  .shiny_text:hover, .shiny_bg:hover {
+  .shiny_text:hover {
+    animation: shine 0.85s;
+  }
+
+  .shiny_bg:hover { 
     animation: shine 0.45s;
+  }
+  .shiny_text:hover, .shiny_bg:hover {
     animation-timing-function: ease-out;
   }
 </style>
