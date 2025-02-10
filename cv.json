@@ -299,7 +299,7 @@
     { "name": "Next" },
     { "name": "Astro" },
     { "name": "Tailwind" },
-    { "name": "Compose/Compose/Swarm", "icon": "Docker" },
+    { "name": "Docker/Compose/Swarm", "icon": "Docker" },
     { "name": "Traefik" },
     { "name": "K8s" },
     { "name": "Ansible" },
