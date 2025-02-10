@@ -13,7 +13,8 @@ import GitLab from "@/icons/GitLab.astro"
 import Tailwind from "@/icons/tailwind.astro"
 import Next from "@/icons/next.astro"
 import Docker from "@/icons/docker.astro"
-import { skills } from "@cv"
+import Bash from "@/icons/shell.astro"
+import { technical_skills, core_skills } from "@cv"
 
 const SKILLS_ICONS: Record<string, any> = {
   HTML,
@@ -28,19 +29,38 @@ const SKILLS_ICONS: Record<string, any> = {
   Next,
   Tailwind,
   GitLab,
-  Docker
+  Docker,
+  Bash
 }
 ---
 
-<Section title="Skills">
+<Section title="Core Skills">
   <ul>
     {
-      skills.map(({ name, icon }) => {
-        const iconName = icon || name.split(/(\.| )/)[0]
+      core_skills.map((name) => {
+
+        const _ = (text : string) => 
+          text.replaceAll(/(\w+)/g, (match) => match.charAt(0).toUpperCase() + match.slice(1))
+        return (
+          <li><span>{_(name)}</span></li>
+        )
+      })
+    }
+  </ul>
+</Section>
+
+<Section title="Technical Skills">
+  <ul>
+    {
+      technical_skills.map(({ name, icon, expert }) => {
+        // split over non-word characters which is a simple and an ingenious way
+        // to take the text of the skill and turn it into something that can work
+        // nicely for the icon name (e.g. "Docker/Compose/Swarm" => gives "Docker")
+        const iconName = icon || name.split(/\W/)[0]
         const Icon = SKILLS_ICONS[iconName]
 
         return (
-          <li>
+          <li class={ expert === true ? 'expert_skill' : ''}>
             {Icon && <Icon />} <span>{name}</span>
           </li>
         )
@@ -66,5 +86,10 @@ const SKILLS_ICONS: Record<string, any> = {
     font-weight: 500;
     gap: 4px;
     padding: 0.2rem 0.6rem;
+  }
+
+  li.expert_skill {
+    background: #333;
+    color: white;
   }
 </style>

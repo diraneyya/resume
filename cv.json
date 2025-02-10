@@ -42,18 +42,16 @@
       },
       {
         "network": "Mastodon",
-        "username": "arabiccola@mastodon.social",
+        "username": "@arabiccola@mastodon.social",
         "shortcut": "O",
         "url": "https://mastodon.social/@arabiccola"
       },
       {
         "network": "ProtonMail",
-        "username": "info@orwa.tech",
         "url": "mailto:info@orwa.tech"
       },
       {
         "network": "CalCom",
-        "username": "Orwa",
         "shortcut": "M",
         "url": "https://cal.com/orwa-d-ncvlhu"
       }
@@ -69,8 +67,8 @@
       "endDate": "2024-12-01",
       "summary": "Conceptualized and planned an ERP solution using open-source software.",
       "highlights": [
-        "Performed an extensive study to ensure that the Frappe Framework (ERPNext) was able to meet the client's full requirements.",
-        "Planned an OBD-II hardware integration to check vehicles in automatically when received, and possible monitor their location until they are sold and delivered."
+        "Performed a meticulous study ensuring Frappe Framework/ERPNext's ability to meet requirements.",
+        "Planned a hardware ERP integration to check in vehicles automatically using the OBD-II interface, and possibly track their location throughout their lifecycle at the Autohaus."
       ]
     },
     {
@@ -80,10 +78,11 @@
       "url": "https://evemo.de/",
       "startDate": "2024-02-01",
       "endDate": "2024-08-01",
-      "summary": "Created a BI dashboard as a feature to their core product using open-source software.",
+      "summary": "Created a Business-Intelligence (BI) dashboard using open-source components.",
       "highlights": [
-        "Built a business-intelligence cockpit using Apache Superset",
-        "Created SQL expressions to drive charts and diagrams in the cockpit dashboard."
+        "Built a BI dashboard using PostgreSQL and Apache Superset.",
+        "Crafted and optimized the SQL expressions for the different charts in the dashboard.",
+        "Worked closely with the account managers to develop meaningful cockpit analytics/metrics."
       ]
     },
     {
@@ -92,10 +91,10 @@
       "url": "https://www.wildcodeschool.com/",
       "startDate": "2022-05-01",
       "endDate": "2023-05-01",
-      "summary": "Taught full-stack web development to 2 student cohorts.",
+      "summary": "Taught full-stack web development to 2 consecutive student cohorts.",
       "highlights": [
-        "Led an industry collaboration with REMONDIS group, leading to a professional app prototype.",
-        "Created teaching tools using a JS compiler (Babel) to explain functions and loops, using inlining/unwinding transformations."
+        "Led an industry collaboration with REMONDIS group, leading to a professional app prototype, which was designed and programmed by the students of the Full-Stack Development program.",
+        "Created innovative teaching tools using a JS compiler called Babel, to explain functions and loops (using \"inlining\" and \"unwinding\" code transformations)."
       ]
     },
     {
@@ -106,10 +105,10 @@
       "endDate": "2022-06-01",
       "summary": "Taught, collaborated, and maintained IT infrastructure.",
       "highlights": [
-        "Drafted the innovation strategy for the Construction Robotics Masters, which was officially adopted.",
-        "Designed interdisciplinary courses which introduced students to GitLab, containers, and unpackaged software.",
-        "Led and managed the development of a cutting-edge UHF RFID system contracted by PORR and 3 other construction companies.",
-        "Maintained the institute's IT infrastructure, including migrating data (ZFS), and implementing ActiveDirectory in classrooms."
+        "Drafted the innovation strategy for the Construction Robotics (CR) Masters, which was officially adopted by the institute.",
+        "Designed and taught two interdisciplinary courses which introduced students to GitLab, containers (Docker), and unpackaged software (Node & Python).",
+        "Led and managed the development of a cutting-edge UHF RFID system contracted by PORR and 3 other construction companies, as part of a research project.",
+        "Maintained the institute's IT infrastructure, including migrating data (ZFS), and implementing \"ActiveDirectory\" and Docker registry caching inside the classroom."
       ]
     },
     {
@@ -118,21 +117,23 @@
       "url": "https://preciseme.com/",
       "startDate": "2018-04-01",
       "endDate": "2019-02-01",
-      "summary": "Led the maintenance/tech-support regional team.",
+      "summary": "Led the maintenance/tech-support MEA regional team.",
       "highlights": [
-        "Optimized the 3D printer training/ticketing process for our MEA (i.e. Middle East and Africa) maintenance partners."
+        "Improved the 3D printer training and maintenance manuals.",
+        "Optimized the ticketing process for our MEA (Middle East and Africa) maintenance partners."
       ]
     },
     {
       "name": "TechShop Inc. (Abu Dhabi)",
-      "position": "Dream (i.e. prototyping) Consultant",
+      "position": "Dream (i.e. rapid-prototyping) Consultant",
       "url": "https://www.instagram.com/makeabudhabi/",
       "startDate": "2015-02-01",
       "endDate": "2018-03-01",
-      "summary": "Started as part-time then became a full-time consultant in the makerspace.",
-      "key_responsibilities": [
-        "Taught over 200 group classes in 3D printing, laser cutting, CNC routing/milling, 2D/3D design, the use of the plotter, plastic forming, metal working, woodworking, and electronics.",
-        "Developed router, casting, vacuum-forming, laser-cutting, CNC milling, and sheet metal show pieces, design examples, and instruction for makerspace members. "
+      "summary": "Started as a part-time, then transitioned to a full-time consultant in the makerspace.",
+      "highlights": [
+        "Taught over 200 group classes in 3D printing, laser cutting, CNC routing/milling, 2D/3D design, plastic forming, metal working, woodworking, and electronics.",
+        "Developed CNC router/mill, casting, vacuum-forming, laser-cutting, and sheet metal show pieces, design examples, and instructions for makerspace members. ",
+        "Brought the 3-axis HAAS CNC mill into function, which remained unused for years, including using it for paid work and opening it up to members of the makerspace."
       ]
     },
     {
@@ -142,7 +143,7 @@
       "startDate": "2015-02-01",
       "endDate": "2017-03-01",
       "summary": "Started the makerspace along with 2 other people.",
-      "key_responsibilities": [
+      "highlights": [
         "Taught over 100 group classes in rapid prototyping.",
         "Revived the lost-wax casting equipment, which remained in storage for years, and used it to conduct jewellery-making workshops in the makerspace."
       ]
@@ -154,8 +155,8 @@
       "startDate": "2013-01-01",
       "endDate": "2015-02-01",
       "summary": "Worked as an elementary/mid-school, then as a high-school, teacher.",
-      "key_responsibilities": [
-        "Taught the ICDL curriculum to elementary, middle and high-school students.",
+      "highlights": [
+        "Taught the ICDL curriculum to elementary/middle/high-school students (ages 8-18).",
         "Started an afterschool club in electronics and robotics."
       ]
     }
@@ -268,49 +269,87 @@
       "summary": "Description…"
     }
   ],
-  "skills": [
-    { "name": "Git" },
-    { "name": "Bash" },
-    { "name": "C/C++" },
-    { "name": "Rust" },
-    { "name": "Go" },
-    { "name": "Python" },
-    { "name": "Ruby" },
-    { "name": "Perl" },
-    { "name": "Lua" },
-    { "name": "PHP" },
-    { "name": "Java" },
-    { "name": "WASM" },
+  "core_skills": [
+    "good communication",
+    "troubleshooting",
+    "problem solving",
+    "teaching",
+    "technical writing",
+    "curriculum design",
+    "educational demos",
+    "facilitation",
+    "team building",
+    "public speaking",
+    "rapid prototyping",
+    "interdisciplinary collaboration",
+    "business development"
+  ],
+  "technical_skills": [
+    { "name": "GW-BASIC" },
+    { "name": "Git", "expert": true },
+    { "name": "Bash", "expert": true },
+    { "name": "PowerShell", "expert": true },
+    { "name": "C/C++", "expert": true },
+    { "name": "Windows", "expert": true },
+    { "name": "MacOS X", "expert": true },
+    { "name": "Linux", "expert": true },
+    { "name": "HTTP/HTTPS", "expert": true },
+    { "name": "Apache2", "expert": true },
+    { "name": "Perl", "expert": true },
+    { "name": "Python", "expert": true },
     { "name": "ASP.NET" },
-    { "name": "HTML5" },
-    { "name": "CSS3" },
-    { "name": "Javascript" },
-    { "name": "Typescript" },
-    { "name": "React" },
-    { "name": "Node" },
-    { "name": "Bun" },
+    { "name": "Visual Basic .NET" },
+    { "name": "PHP", "expert": true },
+    { "name": "Javascript", "expert": true },
+    { "name": "Typescript", "expert": true },
+    { "name": "HTML5", "icon": "HTML", "expert": true },
+    { "name": "CSS3", "icon": "CSS", "expert": true },
+    { "name": "Rust", "familiar": true },
+    { "name": "Go", "familiar": true },
+    { "name": "Ruby" },
+    { "name": "Lua" },
+    { "name": "Java" },
+    { "name": "WASM", "expert": true },
+    { "name": "React.js", "expert": true },
+    { "name": "Node.js", "expert": true },
+    { "name": "Node-RED", "expert": true },
+    { "name": "MQTT", "expert": true },
+    { "name": "Bun", "expert": true },
     { "name": "Deno" },
-    { "name": "MySQL" },
+    { "name": "SQL", "expert": true },
+    { "name": "MySQL", "expert": true },
     { "name": "PostgreSQL" },
     { "name": "MongoDB" },
-    { "name": "GitHub Actions" },
-    { "name": "GitLab CI/CD" },
+    { "name": "GitHub Actions", "expert": true },
+    { "name": "GitLab CI/CD", "expert": true },
     { "name": "Jenkins" },
-    { "name": "Next" },
-    { "name": "Astro" },
+    { "name": "Next.js" },
+    { "name": "Astro.js", "expert": true },
     { "name": "Tailwind" },
-    { "name": "Docker/Compose/Swarm", "icon": "Docker" },
-    { "name": "Traefik" },
+    { "name": "Three.js" },
+    { "name": "Dockerfile", "icon": "Docker", "expert": true },
+    { "name": "Docker Compose", "expert": true },
+    { "name": "Docker Swarm" },
+    { "name": "Podman" },
+    { "name": "Traefik", "expert": true },
     { "name": "K8s" },
     { "name": "Ansible" },
     { "name": "Terraform" },
     { "name": "Grafana" },
     { "name": "InfluxDB" },
     { "name": "Prometheus" },
-    { "name": "Node-RED" },
-    { "name": "Apache Superset" },
-    { "name": "MQTT" },
-    { "name": "HTTP/HTTPS" }
+    { "name": "Apache Superset", "expert": true },
+    { "name": "Helm" },
+    { "name": "Proxmox" },
+    { "name": "Ollama" },
+    { "name": "Langchain" },
+    { "name": "vast.ai" },
+    { "name": "Arduino", "expert": true },
+    { "name": "RTOS" },
+    { "name": "G-CODE", "expert": true },
+    { "name": "VHDL" },
+    { "name": "FPGA" },
+    { "name": "KiCAD" }
   ],
   "projects": [
     {

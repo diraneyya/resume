@@ -39,7 +39,7 @@ import { education } from "@cv"
               </header>
 
               <footer>
-                <p>{courses.join(' · ')}</p>
+                <p><strong>Coursework: </strong>{courses.join(' · ')}</p>
               </footer>
             </article>
           </li>
@@ -84,6 +84,10 @@ import { education } from "@cv"
     margin-top: 0.1rem;
     font-size: 0.7rem;
     font-weight: 300;
+  }
+
+  footer > p > strong {
+    font-weight: 500;
   }
 
   @media (width <= 700px) {
