@@ -10,9 +10,13 @@ import LinkedIn from "@/icons/LinkedIn.astro?raw"
 import GitHub from "@/icons/GitHub.astro?raw"
 import GitLab from "@/icons/GitLab2.astro?raw"
 import CalCom from "@/icons/calcom.astro?raw"
-import PrintIcon from "@/icons/print.astro"
+import ShortcutIcon from "@/icons/Shortcut.astro"
+import PrintIcon from "@/icons/Print.astro"
+import SourceCodeIcon from "@/icons/git.astro"
+import PublicKeyIcon from "@/icons/publickey.astro"
 import { basics } from "@cv"
 import { repository } from "package.json"
+import PGPPublicKeyText from "@public/public.pgp?raw"
 
 const { profiles } = basics
 
@@ -49,7 +53,7 @@ const profilesInfo = profiles
 </footer>
 
 <div id="footer-button" class="no-print">
-  <PrintIcon />
+  <ShortcutIcon />
 </div>
 
 <div
@@ -57,6 +61,13 @@ const profilesInfo = profiles
   data-placeholder="Search command"
   data-info={JSON.stringify(profilesInfo)}
 >
+</div>
+
+<div style="display:none">
+  <div id="icon-print"><PrintIcon /></div>
+  <div id="icon-sourcecode"><SourceCodeIcon /></div>
+  <div id="icon-publickey"><PublicKeyIcon /></div>
+  <textarea id="text-publickey">{PGPPublicKeyText}</textarea>
 </div>
 
 <script>
@@ -97,9 +108,7 @@ const profilesInfo = profiles
   essentialCommands.push({
     id: "print",
     title: "Print",
-    icon: `<svg style="margin-right: 8px" width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
-      </svg>`,
+    icon: document.getElementById("icon-print")?.innerHTML,
     hotkey: `${hotkeypad.activationKey.toLowerCase()}+p`,
     section: "Action",
     handler: () => {
@@ -109,20 +118,45 @@ const profilesInfo = profiles
   if (sourceCodeUrl?.startsWith('http')) essentialCommands.push({
     id: "Show source",
     title: "Source code",
-    icon: `<svg stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-      stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-      d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
-      d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
-      d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 15v-6"
-      ></path><path d="M15 11l-2 -2"></path><path d="M11 7l-1.9 -1.9"></path><path
-        d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"
-      ></path></svg>`,
+    icon: document.getElementById("icon-sourcecode")?.innerHTML,
     hotkey: `ctrl+e`,
     section: "Action",
     handler: () => {
       window.open(sourceCodeUrl, "_blank")
     }
   }); else console.error(`Source code not found (repository.url='${sourceCodeUrl}')`)
+
+  essentialCommands.push({
+    id: "pgp key",
+    title: "Copy Public PGP Key",
+    icon: document.getElementById("icon-publickey")?.innerHTML,
+    hotkey: `ctrl+g`,
+    section: "Action",
+    handler: () => {
+      const textareaPublicKey = document.getElementById("text-publickey");
+      if (textareaPublicKey instanceof HTMLTextAreaElement) {
+        textareaPublicKey.select();
+        textareaPublicKey.setSelectionRange(0, 99999);
+        // if (typeof document.execCommand === 'function') {
+        //   document.execCommand('copy')
+        // }
+        navigator.clipboard.writeText(textareaPublicKey.value)
+          .then(() => {
+            console.info(`%cSuccessfully copied public PGP key to clipboard...`, 
+              'font-weight:bold;background:green;color:white');
+            console.log(`%c${textareaPublicKey.value}`, 'background:#eee;color:green');
+          }).catch((error) => {
+            console.error(`%cCould not copy PGP key to clipboard, copy manually:`, 
+              'font-weight:bold;background:maroon;color:white');
+            console.log(`%c${textareaPublicKey.value}`, 'background:#eee;color:red');
+          });
+        
+      } else {
+        console.error("PGP key not found on page...");
+      }
+    }
+  })
+
   hotkeypad.setCommands([
     ...essentialCommands,
     ...data
