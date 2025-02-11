@@ -6,7 +6,7 @@ import Javascript from "@/icons/javascript.astro"
 import Typescript from "@/icons/type.astro"
 import React from "@/icons/react.astro"
 import Node from "@/icons/node.astro"
-import MySQL from "@/icons/sql.astro"
+import MySQL from "@/icons/MySQL.astro"
 import Git from "@/icons/git.astro"
 import GitHub from "@/icons/GitHub.astro"
 import GitLab from "@/icons/GitLab.astro"
@@ -14,6 +14,51 @@ import Tailwind from "@/icons/tailwind.astro"
 import Next from "@/icons/next.astro"
 import Docker from "@/icons/docker.astro"
 import Bash from "@/icons/shell.astro"
+import Ollama from "@/icons/Ollama.astro"
+import Proxmox from "@/icons/Proxmox.astro"
+import PowerShell from "@/icons/PowerShell.astro"
+import Windows from "@/icons/Windows.astro"
+import MacOS from "@/icons/MacOSX.astro"
+import Linux from "@/icons/Linux.astro"
+import TouchTyping from "@/icons/TouchTyping.astro"
+import Markdown from "@/icons/Markdown.astro"
+import Networking from "@/icons/Networking.astro"
+import Vim from "@/icons/Vim.astro"
+import HTTP from "@/icons/HTTP.astro"
+import MQTT from "@/icons/MQTT.astro"
+import Deno from "@/icons/Deno.astro"
+import Bun from "@/icons/Bun.astro"
+import SQL from "@/icons/SQL.astro"
+import NodeRED from "@/icons/NodeRED.astro"
+import Jenkins from "@/icons/Jenkins.astro"
+import PostgreSQL from "@/icons/PostgreSQL.astro"
+import MongoDB from "@/icons/MongoDB.astro"
+import PHP from "@/icons/PHP.astro"
+import WebAssembly from "@/icons/WebAssembly.astro"
+import Java from "@/icons/Java.astro"
+import ASPNet from "@/icons/ASPNet.astro"
+import Go from "@/icons/Go.astro"
+import Python from "@/icons/Python.astro"
+import Ruby from "@/icons/Ruby.astro"
+import Perl from "@/icons/Perl.astro"
+import Lua from "@/icons/Lua.astro"
+import Rust from "@/icons/Rust.astro"
+import Arduino from "@/icons/Arduino.astro"
+import Apache2 from "@/icons/Apache2.astro"
+import Superset from "@/icons/Superset.astro"
+import Ansible from "@/icons/Ansible.astro"
+import Terraform from "@/icons/Terraform.astro"
+import K8s from "@/icons/K8s.astro"
+import Helm from "@/icons/Helm.astro"
+import Grafana from "@/icons/Grafana.astro"
+import Three from "@/icons/Three.astro"
+import Prometheus from "@/icons/Prometheus.astro"
+import AstroIcon from "@/icons/Astro.astro"
+import InfluxDB from "@/icons/InfluxDB.astro"
+import Jest from "@/icons/Jest.astro"
+import Vast from "@/icons/Vast.astro"
+import HUGO from "@/icons/HUGO.astro"
+
 import { technical_skills, core_skills } from "@cv"
 
 const SKILLS_ICONS: Record<string, any> = {
@@ -26,11 +71,55 @@ const SKILLS_ICONS: Record<string, any> = {
   MySQL,
   Git,
   GitHub,
+  HUGO,
   Next,
   Tailwind,
   GitLab,
   Docker,
-  Bash
+  Bash,
+  Ollama,
+  Proxmox,
+  PowerShell,
+  Windows,
+  MacOS,
+  Linux,
+  TouchTyping,
+  Markdown,
+  Networking,
+  Vim,
+  HTTP,
+  MQTT,
+  Deno,
+  Bun,
+  SQL,
+  NodeRED,
+  Jenkins,
+  PostgreSQL,
+  MongoDB,
+  PHP,
+  WebAssembly,
+  Java,
+  ASPNet,
+  Go, 
+  Python,
+  Ruby,
+  Perl,
+  Lua,
+  Rust,
+  Arduino,
+  Apache2,
+  Superset,
+  Ansible,
+  Terraform,
+  K8s,
+  Helm,
+  Grafana,
+  Three,
+  Prometheus,
+  AstroIcon,
+  InfluxDB,
+  Jest,
+  Vast,
 }
 ---
 
@@ -49,10 +138,10 @@ const SKILLS_ICONS: Record<string, any> = {
   </ul>
 </Section>
 
-<Section title="Technical Skills">
+<Section title="Other Skills">
   <ul>
     {
-      technical_skills.map(({ name, icon, expert }) => {
+      technical_skills.filter(obj => obj?.hide !== true).map(({ name, icon, expert }) => {
         // split over non-word characters which is a simple and an ingenious way
         // to take the text of the skill and turn it into something that can work
         // nicely for the icon name (e.g. "Docker/Compose/Swarm" => gives "Docker")
@@ -60,7 +149,7 @@ const SKILLS_ICONS: Record<string, any> = {
         const Icon = SKILLS_ICONS[iconName]
 
         return (
-          <li class={ expert === true ? 'expert_skill' : ''}>
+          <li class={ expert === true ? 'shiny_bg' : ''}>
             {Icon && <Icon />} <span>{name}</span>
           </li>
         )
@@ -78,7 +167,7 @@ const SKILLS_ICONS: Record<string, any> = {
 
   li {
     align-items: center;
-    background: #eee;
+    background-color: #eee;
     border-radius: 6px;
     color: black;
     display: flex;
@@ -88,8 +177,16 @@ const SKILLS_ICONS: Record<string, any> = {
     padding: 0.2rem 0.6rem;
   }
 
-  li.expert_skill {
-    background: #333;
-    color: white;
+  li.shiny_bg {
+    background-color: aquamarine;
+  }
+
+  @media print {
+    li.shiny_bg {
+      background-color: inherit;
+      border-width: 0.2mm;
+      border-style: dotted;
+      border-color: #666;
+    }
   }
 </style>
