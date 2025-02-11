@@ -106,11 +106,21 @@ import { projects } from "@cv"
   }
 
   article h3 img {
+    transition-property: opacity;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
     float: right;
     height: 64px;
     margin: 0.75rem;
     opacity: 0.66;
     filter:hue-rotate(90deg);
+  }
+
+  article h3 img:hover {
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    opacity: 1.0;
   }
 
   footer {
