@@ -131,7 +131,7 @@ const SKILLS_ICONS: Record<string, any> = {
         const _ = (text : string) => 
           text.replaceAll(/(\w+)/g, (match) => match.charAt(0).toUpperCase() + match.slice(1))
         return (
-          <li><span>{_(name)}</span></li>
+          <li class="shiny_bg"><span>{_(name)}</span></li>
         )
       })
     }
