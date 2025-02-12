@@ -1,3 +1,49 @@
+# orwa.tech
+
+## Fork's documentation
+
+This section is a WIP.
+
+### Bun vs. Node/pnpm
+
+I am currently using `bun` v1.1.33 both as the Astro Javascript runtime and as the package manager.
+
+This choice was originally driven by the desire to deploy the site automatically using Cloudflare Pages (in a manner similar to GitHub/GitLab pages where the deployment script is triggered via a push).
+
+In practice, it was much easier and much more practical to use the `wrangler` cli tool from Cloudflare to deploy the site. This had many advantages:
+
+1. I no longer needed to login via a browser to see if the deployment failed/succeeded.
+2. I was more in control of the build environment and did not have to bother with a myriad of issues resulting from Cloudflare's CI/CD implementation, which was just painful to be honest (sometimes the build failed for no clear reason, with files missing that are not missing from the repository)
+3. Decouple deployments from commits, which I find really convenient and more suitable for a personal site of this nature.
+
+Currently, to deploy the site I use the following command:
+
+```bash
+bun run deploy:cloudflare
+```
+
+### Shine effect
+
+I am still working on perfecting the shine effect, which is currently only visible in the title, the freelance/skill badges.
+
+The challenge there is how to apply it to a replaced-element like an "img" tag without absolute positioning, I am still trying to figure this out.
+
+An important part of perfecting the effect is also making it dark-theme-compatible, which it currently is not.
+
+### Geist-mono font
+
+The mono font currently used on the site is modified. The space is 33% narrower than the space found in the `woff2` fonts obtained through Google Fonts.
+
+I used FontForge (which is free and open source) to edit the font on a Mac OS X, which was straitforward.
+
+### Employment duration
+
+One important aspect of any resume is how it displays employment/education date ranges.
+
+I have opted for encoding the exact dates in the HTML, but showing only the year as part of the range. In addition, I used the exact dates to display a duration of the eymployment, while opting for other simplifications to make that duration easier to understand.
+
+## Original documentation
+
 <div align="center">
 <img src="logo.png" height="90px" width="auto" /> 
 <h2>
