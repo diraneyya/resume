@@ -178,7 +178,7 @@ const { image, summary, url } = basics
       115deg, 
       #0000 0%, 
       #0000 20%, 
-      #fff9 20%, 
+      #fffb 20%, 
       #0000 60%
     );
     background-origin: padding-box;
@@ -188,30 +188,23 @@ const { image, summary, url } = basics
     user-select: none;
   }
 
-  @media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
     .shiny_text {
+      background-color: white !important;
       background-image: linear-gradient(
       115deg, 
-      #fff0 0%, 
-      #fff0 20%, 
+      #0000 0%, 
+      #0000 20%, 
       #0009 20%, 
-      #fff0 60%
-      );
+      #0000 60%
+    );
     }
-  }
+  } */
 
   .shiny_text {
     color: transparent;
     background-clip: text;
     background-color: black;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .shiny_text {
-      color: transparent;
-      background-clip: text;
-      background-color: white;
-    }
   }
 
   .shiny_bg {
@@ -248,4 +241,12 @@ const { image, summary, url } = basics
   .shiny_text:hover, .shiny_bg:hover {
     animation-timing-function: ease-out;
   }
+
+  article > header > ul > li > a {
+    font-weight: 500;
+  }
+  article > header > ul > li > a:hover {
+    text-decoration:  underline;
+  }
+  
 </style>

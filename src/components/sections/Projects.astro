@@ -7,33 +7,34 @@ import { projects } from "@cv"
 ---
 
 <Section title="Work Samples">
-  <ul>
+  <ul id="projects">
     {
       projects.map(
-        ({ url, image, description, highlights, name, isActive, github, gitlab }) => {
+        ({ hidden, url, image, description, omitDescription, highlights, name, isActive, github, gitlab }) => {
           
+          if (hidden === true) return null;
+
+          const isDescription = omitDescription !== true && description;
+
           return (
-            <li>
+            <li class={ isDescription ? 'with_desc' : '' }>
               <article class="print-together">
                 <header>
-                  <h3>
-                    { image && <img src={image} /> }
-                    <a href={url} target="_blank" title={`Goto demo`}>
-                      {name}
-                    </a>
-                    {isActive && <span>•</span>}
-                    {(github || gitlab) && (
+                  <h3 class={ isActive === true ? 'active' : '' }>
+                    { (github || gitlab) && (
                       <a
-                        class="github-code-link"
+                        class='git-icon'
                         href={github || gitlab}
                         target="_blank"
-                        title={`Goto source`}
-                      >
-                        <span class="no-print gitIcon">{ (github && <GitHub />) || <GitLab /> }</span>
-                      </a>
-                    )}
-                  </h3>
-                  <ul>{description.map(p => <li>{p}</li>)}</ul>
+                        title="Goto source"
+                      ><span>{ 
+                          (github && <GitHub />) || <GitLab /> }</span></a>
+                    ) }&nbsp;{ !url ? name : <a href={url} target="_blank" title={`Goto demo`}>{name}</a> 
+                    }</h3>
+                  { image && <a href={image.split('?')[0]}><img src={image} /></a> }{ 
+                    !isDescription ? null :
+                    <ul>{description.map(p => <li><Fragment set:html={p} /></li>)}</ul>
+                  }
                 </header>
                 <footer>
                   {highlights.map((highlight) => {
@@ -50,11 +51,16 @@ import { projects } from "@cv"
 </Section>
 
 <style>
-  section > ul {
+  ul#projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-inline: -16px;
+    gap: 0.33rem;
+    margin-inline: -8px;
+  }
+
+  ul#projects > li.with_desc {
+    grid-column-start: 1;
+    grid-column-end: span row;
   }
 
   article {
@@ -97,30 +103,24 @@ import { projects } from "@cv"
     list-style: disc outside;
   }
 
-  article h3 span {
+  article > header > h3.active::after {
+    /* content: " ◘"; */
+    content: " ⦿";
+    font-weight: 700;
     color: rgb(0, 188, 47);
+    /* color: aquamarine; */
     animation-name: flicker;
     animation-duration: 2s;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
   }
 
-  article h3 img {
-    transition-property: opacity;
-    transition-duration: 0.6s;
-    transition-timing-function: ease-out;
+  article img {
     float: right;
     height: 64px;
     margin: 0.75rem;
-    opacity: 0.66;
-    filter:hue-rotate(90deg);
-  }
-
-  article h3 img:hover {
-    transition-property: opacity;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in;
-    opacity: 1.0;
+    opacity: 0.8;
+    filter: hue-rotate(90deg);
   }
 
   footer {
@@ -139,13 +139,9 @@ import { projects } from "@cv"
     padding: 0.2rem 0.6rem;
   }
 
-  .github-code-link {
-    margin-left: 5px;
-  }
-
-  span.gitIcon {
+  .git-icon {
     position: relative;
-    top: +0.2rem;
+    top: +0.1rem;
   }
 
   @keyframes flicker {
@@ -161,7 +157,7 @@ import { projects } from "@cv"
   }
 
   @media (width <= 700px) {
-    section > ul {
+    ul#projects {
       margin-inline: 0px;
     }
 

@@ -215,7 +215,7 @@
     "summary": "Acts as a lead barista and a member of the repair-cafe team.",
     "highlights": [
       "Conducted various barista workshops on basic espresso brewing, milk-steaming for latte art, cappuccino style, pouring technique, and hot-chocolate art.",
-      "Currently designing a new website for the repair cafe.",
+      "In charge of designing a new website for the repair cafe.",
       "For a year, have been conducting weekly classes to a 15-year old in Ghana spanning subjects such as financial management, professional communication, graphics design, text editing, markdown, GitHub, and using the Linux terminal. The laptop used by the juvenile was sent to Ghana from Germany."
     ]
   }],
@@ -358,6 +358,7 @@
   ],
   "projects": [
     {
+      "hidden": false,
       "name": "Excavator Simulator with Inverse Kinematics and Hydraulic Modelling",
       "isActive": false,
       "description": [
@@ -367,24 +368,107 @@
       ],
       "image": "https://gitlab.com/uploads/-/system/project/avatar/36845334/virtual-programming-lab.png?width=192",
       "highlights": [
-        "Simulink",
+        "professional",
+        "prototype",
+        "SIMULINK",
         "ikfast",
-        "URDF",
+        "Python",
+        "URDF files",
         "Three.js",
         "MQTT",
         "WASM",
         "web worker",
         "emscripten",
-        "C/C++",
+        "C++",
         "robotics",
         "Digital-Twin",
         "Node-RED",
-        "Education",
-        "Demo"
+        "education",
+        "demo"
       ],
       "url": "https://rwth-crmasters-sose22.gitlab.io/course-material/excavator-simulator/simple.html",
       "gitlab": "https://gitlab.com/rwth-crmasters-sose22/course-material/excavator-simulator",
       "github": null
+    },
+    {
+      "hidden": false,
+      "name": "Student App Concept/Prototype for REMONDIS Group",
+      "isActive": false,
+      "omitDescription": false,
+      "image": "https://raw.githubusercontent.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/refs/heads/main/resources/pitch_scaled.jpeg",
+      "links": [
+        "https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/PLANNING.md",
+        "https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/ui_concept_todos.md"
+      ],
+      "description": [
+        "Assisted students in the ideation phase of the app, including planning the user roles, the REST API, and the scoping of the application.",
+        "Taught the students what a state machine is, and helped them model the system using a <a href='https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/PLANNING.md#de-cluettering-case-states'>state diagram</a>.",
+        "Defended and advocated for a <a href='https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/ui_concept_todos.md'>todo-based, user-centric design</a>, which was initially opposed by the students."
+      ],
+      "highlights": [
+        "teaching",
+        "industry collab",
+        "business process",
+        "operations",
+        "modelling",
+        "mobile",
+        "documentation",
+        "user analysis",
+        "user roles",
+        "state machine",
+        "React.js",
+        "Redux"
+      ],
+      "url": null,
+      "gitlab": null,
+      "github": "https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning"
+    },
+    {
+      "hidden": false,
+      "name": "Tar Extraction Exclude-Pattern Demo",
+      "isActive": false,
+      "omitDescription": true,
+      "description": [
+        "Created a demo to show differences in how paths are encoded/stored in filesystem tarballs.",
+        "Explained how a simple internal detail in the way tarballs are extracted in Proxmox can affect which rootfs tarballs can be used as LXC templates, and which leads to error.",
+        "Offered a practical and a simple patch to allow, for example, the Ubuntu rootfs tarballs available online to be used as LXC templates without repackaging."
+      ],
+      "image": null,
+      "highlights": [
+        "volunteering",
+        "Proxmox",
+        "bug",
+        "patch",
+        "tarball",
+        "exclude pattern",
+        "tmux",
+        "interactive",
+        "education",
+        "demo"
+      ],
+      "url": null,
+      "gitlab": null,
+      "github": "https://github.com/diraneyya/bug_proxmox_6040"
+    },
+    {
+      "hidden": false,
+      "name": "Docker Compose Wrapper",
+      "isActive": true,
+      "omitDescription": true,
+      "description": null,
+      "image": null,
+      "highlights": [
+        "hobby project",
+        "cli",
+        "Docker Compose",
+        "free port",
+        "external secrets",
+        "testing",
+        "evaluation"
+      ],
+      "url": null,
+      "gitlab": null,
+      "github": "https://github.com/diraneyya/free_port_dc"
     }
   ]
 }
