@@ -282,7 +282,8 @@
     "public speaking",
     "rapid prototyping",
     "interdisciplinary collaboration",
-    "business development"
+    "business modeling",
+    "process optimisation"
   ],
   "technical_skills": [
     { "name": "Linux", "expert": true },
@@ -364,7 +365,7 @@
       "description": [
         "Developed a browser-based real-time simulation of a hydraulic excavator to enhance Construction Robotics Master's coursework at RWTH Aachen.",
         "Enabled remote MQTT control for students, featuring inverse-kinematic (XYZ) trajectory planning and precise hydraulic system modeling.",
-        "Achieved high-fidelity simulation by compiling Simulink/ikfast C++ models into WebAssembly, which ran seamlessly using a webworker."
+        "Achieved high-fidelity simulation by compiling SIMULINK/ikfast C++ models into WebAssembly, which ran seamlessly using a webworker."
       ],
       "image": "https://gitlab.com/uploads/-/system/project/avatar/36845334/virtual-programming-lab.png?width=192",
       "highlights": [
@@ -402,8 +403,8 @@
       ],
       "description": [
         "Assisted students in the ideation phase of the app, including planning the user roles, the REST API, and the scoping of the application.",
-        "Taught the students what a state machine is, and helped them model the system using a <a href='https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/PLANNING.md#de-cluettering-case-states'>state diagram</a>.",
-        "Defended and advocated for a <a href='https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/ui_concept_todos.md'>todo-based, user-centric design</a>, which was initially opposed by the students."
+        "Taught the students what a state machine is, and helped them model the system using a <a target='_blank' href='https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/PLANNING.md#de-cluettering-case-states'>state diagram</a>.",
+        "Facilitated meetings with future app users, and championed their perspective by defending a <a target='_blank' href='https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/ui_concept_todos.md'>todo-centered</a> UI design, which was initially opposed by the students."
       ],
       "highlights": [
         "teaching",
@@ -411,6 +412,7 @@
         "business process",
         "operations",
         "modelling",
+        "optimisation",
         "mobile",
         "documentation",
         "user analysis",
