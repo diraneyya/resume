@@ -1,5 +1,6 @@
 ---
 import { basics } from "@cv"
+import hyperlinkIconPath from "./hyperlink.svg?url" 
 
 interface Props {
   title: string
@@ -38,7 +39,7 @@ const { image, summary, url } = basics
   </body>
 </html>
 
-<style is:global>
+<style is:global define:vars={{ hyperlinkIconUrl: `url("${hyperlinkIconPath}")` }}>
 
   /* Geist-Mono 300 served from a local file: latin-ext charset */
   @font-face {
@@ -244,11 +245,12 @@ const { image, summary, url } = basics
 
   article > header > ul > li > a {
     font-weight: 500;
-    background-image: url('/hyperlink.svg');
+    background-image: var(--hyperlinkIconUrl);
     background-repeat: no-repeat;
     background-position-x: 0px;
     padding-left: 18px;
   }
+
   article > header > ul > li > a:hover {
     text-decoration:  underline;
   }

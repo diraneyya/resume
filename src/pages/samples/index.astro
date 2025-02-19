@@ -1,0 +1,30 @@
+---
+import Layout from "@/layouts/Layout.astro"
+import Projects from "@/components/sections/Projects.astro"
+import KeyboardManager from "@/components/KeyboardManager.astro"
+
+import { basics } from "@cv"
+const { name } = basics
+---
+
+<Layout title={`${name}'s Online Resume`}>
+  <main>
+    <Projects limited={true} />
+  </main>
+
+  <KeyboardManager />
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+
+  @media (width <= 700px) {
+    main {
+      padding: 2rem;
+    }
+  }
+</style>

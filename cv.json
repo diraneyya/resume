@@ -282,14 +282,14 @@
     "public speaking",
     "rapid prototyping",
     "interdisciplinary collaboration",
-    "business modeling",
-    "process optimisation"
+    "business development", "research"
+    
   ],
   "technical_skills": [
     { "name": "Linux", "expert": true },
     { "name": "Windows", "expert": true },
     { "name": "MacOS X", "expert": true },
-    { "name": "Touch Typing", "icon": "TouchTyping" },
+    { "name": "Touch Typing", "icon": "TouchTyping", "expert": true },
     { "name": "Vim" },
     { "name": "Markdown", "expert": true },
     { "name": "Bash", "expert": true },
@@ -427,6 +427,45 @@
     },
     {
       "hidden": false,
+      "name": "UHF RFID Tags/Readers in Construction (R&D)",
+      "isActive": false,
+      "omitDescription": false,
+      "image": null,
+      "description": [
+        "Spearheaded end-to-end prototyping of a proprietary construction process leveraging UHF RFID technology, delivering a functional system within a 6-month timeline.",
+        "Researched the RFID technologies available, recommending an IMPINJ UHF RFID reader with a REST API interface, which was an important prototyping decision, permitting the successful creation of a working prototype in a 6-month timeline.",
+        "Containerised the full server-stack application, which relied on an open-source less-code tool named NodeRED, resulting in a fully customisable prototype that can be launched on most desktop and mobile computers using just Docker.",
+        "Fully researched, procured the parts, and delegated the build of a complete power system using suitable battery chemistry, meeting partners' requirement of an 8-hour uninterrupted operation on a single charge.",
+        "Managed the development of a minimal server application that created a REST API interface for a proprietary handheld reader with a Java-based SDK.",
+        "All of the different software parts were combined into a single Docker application that could be launched using a PowerShell script from a desktop shortcut on partners' laptops."
+      ],
+      "highlights": [
+        "BIM",
+        "R&D",
+        "research",
+        "no-code",
+        "industry",
+        "construction",
+        "PORR",
+        "Saint-Gobain",
+        "UHF RFID",
+        "antennas",
+        "IMPINJ reader",
+        "REST API",
+        "NodeRED",
+        "Docker",
+        "Java",
+        "custom development",
+        "SDK",
+        "PowerShell",
+        "power system"
+      ],
+      "url": null,
+      "gitlab": null,
+      "github": null
+    },
+    {
+      "hidden": false,
       "name": "Tar Extraction Exclude-Pattern Demo",
       "isActive": false,
       "omitDescription": true,
@@ -451,6 +490,28 @@
       "url": null,
       "gitlab": null,
       "github": "https://github.com/diraneyya/bug_proxmox_6040"
+    },
+    {
+      "hidden": false,
+      "name": "URDF-to-WASM CI/CD Pipeline",
+      "isActive": false,
+      "omitDescription": true,
+      "description": null,
+      "image": null,
+      "highlights": [
+        "GitLab CI/CD",
+        "robotics",
+        "URDF files",
+        "WASM",
+        "ikfast",
+        "Python",
+        "C++",
+        "emscripten",
+        "inverse kinematics"
+      ],
+      "url": "https://diraneyya.gitlab.io/paper-wasm-ik-pipeline",
+      "gitlab": "https://gitlab.com/diraneyya/paper-wasm-ik-pipeline",
+      "github": null
     },
     {
       "hidden": false,
