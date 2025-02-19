@@ -172,6 +172,12 @@ const { image, summary, url } = basics
     .print-together {
       page-break-inside: avoid !important;
     }
+
+    article > header > ul > li > a {
+      -webkit-print-color-adjust: exact !important; /* Chrome, Safari 6 – 15.3, Edge */
+      color-adjust: exact !important;               /* Firefox 48 – 96 */
+      print-color-adjust: exact !important;         /* Firefox 97+, Safari 15.4+ */
+    }
   }
 
   .shiny_text, .shiny_bg {
