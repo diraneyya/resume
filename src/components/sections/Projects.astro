@@ -38,7 +38,7 @@ const {limited} = Astro.props;
                     }</h3>
                     { url && <p class='print'><strong>Demo:</strong> {url}</p> }
                     { (github || gitlab) && <p class='print'><strong>Source:</strong> {github || gitlab}</p> }
-                  { image && <a href={image.split('?')[0]}><img src={image} /></a> }{ 
+                  { image && <a target="_blank" href={image.split('?')[0]}><img src={image} /></a> }{ 
                     !isDescription ? null :
                     <ul>{description.map(p => <li><Fragment set:html={p} /></li>)}</ul>
                   }

@@ -27,9 +27,10 @@
     "@astrojs/check": "latest",
     "astro": "latest",
     "hotkeypad": "^0.1.0",
+    "posthog-js": "latest",
     "typescript": "latest"
   },
   "devDependencies": {
-    "wrangler": "^3.107.3"
+    "wrangler": "latest"
   }
 }

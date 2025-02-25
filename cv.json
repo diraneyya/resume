@@ -336,7 +336,7 @@
     { "name": "Git", "expert": true },
     { "name": "GitHub Actions", "expert": true },
     { "name": "GitLab CI/CD", "expert": true },
-    { "name": "Jenkins" },
+    { "name": "Jenkins", "url": "https://jnkns.orwa.tech", "icon": "Jenkins2", "icon_only": false },
     { "name": "Dockerfile", "icon": "Docker", "expert": true },
     { "name": "Docker Compose", "expert": true },
     { "name": "Docker Swarm" },
@@ -345,7 +345,7 @@
     { "name": "Helm Charts" },
     { "name": "Ansible" },
     { "name": "Terraform" },
-    { "name": "Proxmox" },
+    { "name": "Proxmox", "url": "https://prxmx.orwa.tech" },
     { "name": "vast.ai", "icon": "Vast", "expert": true },
     { "name": "Grafana" },
     { "name": "Arduino", "expert": true },
@@ -355,7 +355,9 @@
     { "name": "FPGA", "hide": true },
     { "name": "KiCAD", "hide": true },
     { "name": "Ollama" },
-    { "name": "Langchain" }
+    { "name": "Langchain" },
+    { "name": "n8n", "url": "https://n8n.orwa.tech", "icon": "n8n2", "icon_only": false },
+    { "name": "FlowiseAI", "url": "https://flowise.orwa.tech", "icon_only": true, "hide": false }
   ],
   "projects": [
     {
@@ -432,12 +434,10 @@
       "omitDescription": false,
       "image": null,
       "description": [
-        "Spearheaded end-to-end prototyping of a proprietary construction process leveraging UHF RFID technology, delivering a functional system within a 6-month timeline.",
-        "Researched the RFID technologies available, recommending an IMPINJ UHF RFID reader with a REST API interface, which was an important prototyping decision, permitting the successful creation of a working prototype in a 6-month timeline.",
-        "Containerised the full server-stack application, which relied on an open-source less-code tool named NodeRED, resulting in a fully customisable prototype that can be launched on most desktop and mobile computers using just Docker.",
-        "Fully researched, procured the parts, and delegated the build of a complete power system using suitable battery chemistry, meeting partners' requirement of an 8-hour uninterrupted operation on a single charge.",
-        "Managed the development of a minimal server application that created a REST API interface for a proprietary handheld reader with a Java-based SDK.",
-        "All of the different software parts were combined into a single Docker application that could be launched using a PowerShell script from a desktop shortcut on partners' laptops."
+        "Led the end-to-end prototyping of a construction process leveraging UHF RFID technology, delivering a functional system within a 6-month timeline.",
+        "Researched existing technology and the market, resulting in the recommendation of an IMPINJ UHF RFID reader with an easy-to-use REST API interface.",
+        "Developed a custom software to provide a handheld UHF RFID reader with a REST API interface using a Java-based Software Development Kit (SDK).",
+        "Used containerisation (Docker) and open-source less-code tools (i.e. NodeRED) to implement a number of customisable workflows for registering and tracking construction materials on the construction site."
       ],
       "highlights": [
         "BIM",
@@ -455,8 +455,8 @@
         "NodeRED",
         "Docker",
         "Java",
-        "custom development",
         "SDK",
+        "custom development",
         "PowerShell",
         "power system"
       ],
