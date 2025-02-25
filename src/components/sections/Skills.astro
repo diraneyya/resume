@@ -4,6 +4,20 @@ import type { AstroInstance } from "astro"
 import { technical_skills, core_skills } from "@cv"
 
 const SKILLS_ICONS : Record<string, AstroInstance> = import.meta.glob("@/icons/*.astro", { eager: true })
+function getSkillIcon(icon : string) {
+  const keys = Object.keys(SKILLS_ICONS)
+  const index = keys.findIndex((value) => {
+    const matches = value?.match(/(\w+)\.astro/)
+    if (matches && matches.length >= 2) 
+      return matches[1]?.toLowerCase() === icon.toLowerCase()
+    return false
+  })
+
+  if (index >= 0)
+    return SKILLS_ICONS[keys[index]]
+
+  return null
+}
 ---
 
 <Section title="Core Skills">
@@ -29,7 +43,7 @@ const SKILLS_ICONS : Record<string, AstroInstance> = import.meta.glob("@/icons/*
         // to take the text of the skill and turn it into something that can work
         // nicely for the icon name (e.g. "Docker/Compose/Swarm" => gives "Docker")
         const iconName = icon || name.split(/\W/)[0]
-        const Icon = SKILLS_ICONS[`/src/icons/${iconName}.astro`]
+        const Icon = getSkillIcon(iconName)
 
         const isDeployed = url?.startsWith('http')
         let content = <Fragment>{Icon && <Icon.default />} <span>{name}</span></Fragment>

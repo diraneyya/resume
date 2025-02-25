@@ -40,7 +40,8 @@ const { image, summary, url } = basics
       import posthog from 'posthog-js'
       if (
         !window.location.host.includes('127.0.0.1') && 
-        !window.location.host.includes('localhost')) {
+        !window.location.host.includes('localhost') &&
+        !window.location.search.includes('no_analytics')) {
         posthog.init('phc_d2FFhAZNU8TOUNObrcOBs0O6ITZPYNWvIr0oWvEyqh7', { 
           api_host: 'https://eu.i.posthog.com' })
         console.log("Analytics activated.");

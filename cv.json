@@ -314,7 +314,7 @@
     { "name": "Node.js", "expert": true },
     { "name": "Astro.js", "icon": "AstroIcon", "expert": true },
     { "name": "Next.js" },
-    { "name": "Tailwind" },
+    { "name": "Tailwind CSS" },
     { "name": "Three.js", "icon": "Three" },
     { "name": "Bun", "expert": true },
     { "name": "Deno" },
