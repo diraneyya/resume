@@ -327,7 +327,7 @@
     { "name": "PostgreSQL" },
     { "name": "MongoDB" },
     { "name": "InfluxDB" },
-    { "name": "Apache Superset", "icon": "Superset", "expert": true },
+    { "name": "Apache Superset", "url": "https://superset.orwa.tech", "icon": "Superset", "expert": true },
     { "name": "Prometheus" },
     { "name": "HTTP/HTTPS", "expert": true },
     { "name": "Networking", "expert": true },
@@ -336,6 +336,7 @@
     { "name": "Git", "expert": true },
     { "name": "GitHub Actions", "expert": true },
     { "name": "GitLab CI/CD", "expert": true },
+    { "name": "Forgejo", "url": "https://forgejo.orwa.tech" },
     { "name": "Jenkins", "url": "https://jnkns.orwa.tech", "icon": "Jenkins2", "icon_only": false },
     { "name": "Dockerfile", "icon": "Docker", "expert": true },
     { "name": "Docker Compose", "expert": true },
@@ -357,7 +358,9 @@
     { "name": "Ollama" },
     { "name": "Langchain" },
     { "name": "n8n", "url": "https://n8n.orwa.tech", "icon": "n8n2", "icon_only": false },
-    { "name": "FlowiseAI", "url": "https://flowise.orwa.tech", "icon_only": true, "hide": false }
+    { "name": "FlowiseAI", "url": "https://flowise.orwa.tech", "icon_only": true, "hide": false },
+    { "name": "immich", "url": "https://immich.orwa.tech" },
+    { "name": "Seafile", "url": "https://seafile.orwa.tech", "icon_only": true, "hide": false }
   ],
   "projects": [
     {
@@ -515,6 +518,27 @@
     },
     {
       "hidden": false,
+      "name": "docker2lxc",
+      "isActive": true,
+      "omitDescription": true,
+      "description": null,
+      "image": null,
+      "highlights": [
+        "hobby project",
+        "Docker",
+        "cli",
+        "Proxmox",
+        "Linux Containers",
+        "tar",
+        "bash tricks",
+        "novel interface"
+      ],
+      "url": null,
+      "gitlab": null,
+      "github": "https://github.com/diraneyya/docker2lxc"
+    },
+    {
+      "hidden": true,
       "name": "Docker Compose Wrapper",
       "isActive": true,
       "omitDescription": true,
