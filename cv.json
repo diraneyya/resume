@@ -59,6 +59,22 @@
   },
   "work": [
     {
+      "name": "Vennre",
+      "position": "Lead Developer/Software Architect",
+      "freelance": false,
+      "url": "https://vennre.com/",
+      "startDate": "2025-04-15",
+      "endDate": "2025-08-01",
+      "summary": "Conceptualized and planned an ERP solution using open-source software.",
+      "highlights": [
+        "Database Management: Maintained PostgreSQL/Supabase backend across production, staging, and local environments. Handled schema migrations, triggers, stored procedures, and database functions.",
+        "Development Tools: Built scripts for local development setup and database migrations between SaaS and local Supabase instances.",
+        "Full-Stack Development: Developed features for employee portal (Remix/React) and mobile app (Ionic), focusing on secure code organisation for financial application.",
+        "Architecture: Made technical decisions prioritising long-term maintainability and sought to implement sound abstractions across the codebase.",
+        "Integration: Built a robust Hubspot data migration system with logging and error handling for a reliable data sync."
+      ]
+    },
+    {
       "name": "Autohaus Twardowski GmbH (Wegberg)",
       "position": "Open-Source Advocacy Consultant",
       "freelance": true,
@@ -360,9 +376,40 @@
     { "name": "n8n", "url": "https://n8n.orwa.tech", "icon": "n8n2", "icon_only": false },
     { "name": "FlowiseAI", "url": "https://flowise.orwa.tech", "icon_only": true, "hide": false },
     { "name": "immich", "url": "https://immich.orwa.tech" },
-    { "name": "Seafile", "url": "https://seafile.orwa.tech", "icon_only": true, "hide": false }
+    { "name": "Seafile", "url": "https://seafile.orwa.tech", "icon_only": true, "hide": false },
+    { "name": "Slack API", "icon": "Slack" },
+    { "name": "Hubspot API", "icon": "Hubspot" }
   ],
   "projects": [
+    {
+      "hidden": false,
+      "name": "Hubspot Integration with Slack Notifications",
+      "isActive": false,
+      "description": [
+        "Built a robust data synchronisation system between the Vennre platform and HubSpot, prioritising reliability and maintainability.",
+        "The integration featured comprehensive logging, multiple security layers for both manual and automated operations, and flexible deployment options as either a standalone script or edge function.",
+        "Designed with debugging capabilities that allowed step-through code inspection even in edge function environments, ensuring rapid troubleshooting and seamless maintenance."
+      ],
+      "image": "./hubspot_integration_logo.png",
+      "bigger_image": "./hubspot_integration_screenshot.png",
+      "highlights": [
+        "robust",
+        "integration",
+        "Hubspot Batch API",
+        "Upsert",
+        "data comparison",
+        "automation",
+        "cli",
+        "Edge Function",
+        "Supabase",
+        "Slack notifications",
+        "logging",
+        "error handling"
+      ],
+      "url": null,
+      "gitlab": null,
+      "github": null
+    },
     {
       "hidden": false,
       "name": "Excavator Simulator with Inverse Kinematics and Hydraulic Modelling",
