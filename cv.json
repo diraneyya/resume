@@ -65,7 +65,7 @@
       "url": "https://vennre.com/",
       "startDate": "2025-04-15",
       "endDate": "2025-08-01",
-      "summary": "Conceptualized and planned an ERP solution using open-source software.",
+      "summary": "Maintained a Supabase backend and two web applications.",
       "highlights": [
         "Database Management: Maintained PostgreSQL/Supabase backend across production, staging, and local environments. Handled schema migrations, triggers, stored procedures, and database functions.",
         "Development Tools: Built scripts for local development setup and database migrations between SaaS and local Supabase instances.",
@@ -378,7 +378,8 @@
     { "name": "immich", "url": "https://immich.orwa.tech" },
     { "name": "Seafile", "url": "https://seafile.orwa.tech", "icon_only": true, "hide": false },
     { "name": "Slack API", "icon": "Slack" },
-    { "name": "Hubspot API", "icon": "Hubspot" }
+    { "name": "Hubspot API", "icon": "Hubspot" },
+    { "name": "supbase (SaaS and self-hosted)", "icon": "supabase" }
   ],
   "projects": [
     {
