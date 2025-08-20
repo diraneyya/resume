@@ -38,7 +38,7 @@ function getSkillIcon(icon : string) {
 <Section title="Technical Skills & Deployments">
   <ul>
     {
-      technical_skills.filter(obj => obj?.hide !== true).map(({ name, icon, url, icon_only, expert }) => {
+      technical_skills.filter(obj => obj?.hide !== true).map(({ name, icon, url, icon_only, expert, printable }) => {
         // split over non-word characters which is a simple and an ingenious way
         // to take the text of the skill and turn it into something that can work
         // nicely for the icon name (e.g. "Docker/Compose/Swarm" => gives "Docker")
@@ -52,6 +52,7 @@ function getSkillIcon(icon : string) {
 
         return (
           <li class:list={[ 
+            printable ? [] : [ 'no-print' ],
             expert === true ? 'shiny_bg' : '', 
             isDeployed === true ? 'pulsing' : '' 
             ]}>{isDeployed == true ? <a target="_blank" href={url}>{
@@ -108,7 +109,7 @@ function getSkillIcon(icon : string) {
   }
 
   @media print {
-    li.shiny_bg {
+    li.shiny_bg, .pulsing {
       background-color: inherit;
       border-width: 0.2mm;
       border-style: dotted;
@@ -117,7 +118,8 @@ function getSkillIcon(icon : string) {
 
     .pulsing {
       animation: none;
-      border: #333 solid 0.2mm;
+      /*border: #333 solid 0.2mm;*/
+
     }
     /* li {
       border: 0.2mm solid #000
