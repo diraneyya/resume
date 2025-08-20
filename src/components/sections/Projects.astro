@@ -36,8 +36,8 @@ const {limited} = Astro.props;
                       <a href={github || gitlab} target="_blank" title={`Goto source`}>{name}</a> : 
                       <a href={url} target="_blank" title={`Goto demo`}>{name}</a> 
                     }</h3>
-                    { url && <p class='print'><strong>Demo:</strong> {url}</p> }
-                    { (github || gitlab) && <p class='print'><strong>Source:</strong> {github || gitlab}</p> }
+                    { url && <p class='print' style="word-break: break-all"><strong>Demo:</strong> {url}</p> }
+                    { (github || gitlab) && <p class='print' style="word-break: break-all"><strong>Source:</strong> {github || gitlab}</p> }
                   { image && <a target="_blank" href={bigger_image ?? image.split('?')[0]}><img src={image} /></a> }{ 
                     !isDescription ? null :
                     <ul>{description.map(p => <li><Fragment set:html={p} /></li>)}</ul>
