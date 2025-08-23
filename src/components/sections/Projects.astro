@@ -40,6 +40,7 @@ const {limited} = Astro.props;
                     { (github || gitlab) && <p class='print' style="word-break: break-all"><strong>Source:</strong> {github || gitlab}</p> }
                   { image && <a target="_blank" href={bigger_image ?? image.split('?')[0]}><img src={image} /></a> }{ 
                     !isDescription ? null :
+                    // Using set:html for static content from cv.json - safe as content is controlled
                     <ul>{description.map(p => <li><Fragment set:html={p} /></li>)}</ul>
                   }
                 </header>

@@ -36,7 +36,10 @@ const profilesInfo = profiles
   .filter(obj => obj?.shortcut?.length === 1)
   .map(({ network, url, shortcut }) => {
     const icon = SOCIAL_ICONS[network]
-    if (!icon) throw Error(`No icon was found for network ${network}.`)
+    if (!icon) {
+      console.warn(`No icon found for network: ${network}. Skipping.`)
+      return null
+    }
 
     return {
       id: network,
@@ -47,6 +50,7 @@ const profilesInfo = profiles
       hotkey: shortcut
   }
 })
+  .filter(Boolean)
 ---
 
 <footer id="normal-footer" class="no-print" data-source-code={repository.url}>
@@ -186,17 +190,6 @@ const profilesInfo = profiles
     ...data
   ])
 
-  if (sourceCodeUrl?.startsWith('http')) essentialCommands.push({
-    id: "Show source",
-    title: "Source code",
-    icon: document.getElementById("icon-sourcecode")?.innerHTML,
-    hotkey: `${hotkeypad.activationKey.toLowerCase()}+e`,
-    section: "Download",
-    handler: () => {
-      window.open(sourceCodeUrl, "_blank")
-    }
-  }); else console.error(`Source code not found (repository.url='${sourceCodeUrl}')`)
-
   const footerButton = document.getElementById("footer-button")
   footerButton?.addEventListener("click", () => {
     var event = new KeyboardEvent("keydown", {
@@ -243,6 +236,18 @@ const profilesInfo = profiles
     }
     to {
       opacity: 1;
+    }
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
 
