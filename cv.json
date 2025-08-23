@@ -387,6 +387,7 @@
       "hidden": false,
       "name": "Hubspot Integration with Slack Notifications",
       "isActive": false,
+      "ownLine": true,
       "description": [
         "Built a robust data synchronisation system between the Vennre platform and HubSpot, prioritising reliability and maintainability.",
         "The integration featured comprehensive logging, multiple security layers for both manual and automated operations, and flexible deployment options as either a standalone script or edge function.",
@@ -416,6 +417,7 @@
       "hidden": false,
       "name": "Excavator Simulator with Inverse Kinematics and Hydraulic Modelling",
       "isActive": false,
+      "ownLine": true,
       "description": [
         "Developed a browser-based real-time simulation of a hydraulic excavator to enhance Construction Robotics Master's coursework at RWTH Aachen.",
         "Enabled remote MQTT control for students, featuring inverse-kinematic (XYZ) trajectory planning and precise hydraulic system modeling.",
@@ -449,7 +451,7 @@
       "hidden": false,
       "name": "Student App Concept/Prototype for REMONDIS Group",
       "isActive": false,
-      "omitDescription": false,
+      "ownLine": true,
       "image": "https://raw.githubusercontent.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/refs/heads/main/resources/pitch_scaled.jpeg",
       "links": [
         "https://github.com/WildCodeSchool/2022-07-EN-Berlin-Remote1-Project3Planning/blob/main/PLANNING.md",
@@ -483,7 +485,7 @@
       "hidden": false,
       "name": "UHF RFID Tags/Readers in Construction (R&D)",
       "isActive": false,
-      "omitDescription": false,
+      "ownLine": true,
       "image": null,
       "description": [
         "Led the end-to-end prototyping of a construction process leveraging UHF RFID technology, delivering a functional system within a 6-month timeline.",
@@ -518,9 +520,30 @@
     },
     {
       "hidden": false,
+      "name": "pg_fetch_cycle",
+      "isActive": true,
+      "description": null,
+      "image": null,
+      "highlights": [
+        "PL/pgSQL",
+        "PostgreSQL",
+        "postgres extension",
+        "pg_net",
+        "scraper",
+        "thick database",
+        "big data",
+        "open-source",
+        "MIT license"
+      ],
+      "url": null,
+      "gitlab": null,
+      "github": "https://forgejo.orwa.tech/open-source/pg_fetch_cycle"
+    },
+    {
+      "hidden": false,
       "name": "Tar Extraction Exclude-Pattern Demo",
-      "isActive": false,
       "omitDescription": true,
+      "isActive": false,
       "description": [
         "Created a demo to show differences in how paths are encoded/stored in filesystem tarballs.",
         "Explained how a simple internal detail in the way tarballs are extracted in Proxmox can affect which rootfs tarballs can be used as LXC templates, and which leads to error.",
@@ -547,7 +570,6 @@
       "hidden": false,
       "name": "URDF-to-WASM CI/CD Pipeline",
       "isActive": false,
-      "omitDescription": true,
       "description": null,
       "image": null,
       "highlights": [
@@ -568,8 +590,7 @@
     {
       "hidden": false,
       "name": "docker2lxc",
-      "isActive": true,
-      "omitDescription": true,
+      "isActive": false,
       "description": null,
       "image": null,
       "highlights": [
@@ -590,7 +611,6 @@
       "hidden": true,
       "name": "Docker Compose Wrapper",
       "isActive": true,
-      "omitDescription": true,
       "description": null,
       "image": null,
       "highlights": [
