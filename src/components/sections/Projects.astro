@@ -11,7 +11,7 @@ const {limited} = Astro.props;
   <ul id="projects">
     {
       projects.map(
-        ({ hidden, url, image, bigger_image, description, omitDescription, highlights, name, isActive, github, gitlab }) => {
+        ({ hidden, url, image, bigger_image, description, omitDescription, highlights, name, isActive, github, gitlab, ownLine }) => {
           
           if (hidden === true) return null;
 
@@ -20,7 +20,7 @@ const {limited} = Astro.props;
           if (limited === true && !isDescription) return null;
 
           return (
-            <li class={ isDescription ? 'with_desc' : '' }>
+            <li class={ ownLine ? 'with_desc' : '' }>
               <article class="print-together">
                 <header>
                   <h3 class={ isActive === true ? 'active' : '' }>
@@ -60,14 +60,17 @@ const {limited} = Astro.props;
 <style>
   ul#projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 0.33rem;
     margin-inline: -8px;
   }
 
   ul#projects > li.with_desc {
-    grid-column-start: 1;
-    grid-column-end: span row;
+    grid-column-end: span 3;
+  }
+
+  ul#projects > li {
+    grid-column-end: span 1;
   }
 
   article {
