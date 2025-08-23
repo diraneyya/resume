@@ -20,7 +20,7 @@ const {limited} = Astro.props;
           if (limited === true && !isDescription) return null;
 
           return (
-            <li class={ ownLine ? 'with_desc' : '' }>
+            <li class={ ownLine ? 'own_row' : '' }>
               <article class="print-together">
                 <header>
                   <h3 class={ isActive === true ? 'active' : '' }>
@@ -65,7 +65,7 @@ const {limited} = Astro.props;
     margin-inline: -8px;
   }
 
-  ul#projects > li.with_desc {
+  ul#projects > li.own_row {
     grid-column-end: span 3;
   }
 
